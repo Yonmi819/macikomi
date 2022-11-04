@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>まちコミ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="sticky-top" style="background-color:#193278;">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container"> <a class="navbar-brand-light" style="color:#ffffff;" href="/">まちコミ</a>
+        </div>
+        </nav>
+    </header>
+    <main>
+    <%# 各ページ本体　%>
+      <%= yield %>
+  </main>
+    
+    <footer class="footer fixed-bottom" style="background-color:#193278;">
+    <p class="footer-text" style="color:#ffffff;">© All rights reserved by Infratop.Inc.</p>
+    </div>
+  </footer>
+  </body>
+</html>
