@@ -62,4 +62,8 @@ gem 'kaminari','~> 1.2.1'
 
 gem 'net-smtp'
 
+gem 'simple_calendar', '~> 2.0'
+gem 'rails-i18n'
+
+
 

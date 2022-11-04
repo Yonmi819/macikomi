@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="mx-auto col-6"> 
+    <h6 class="">イベントをつくる</h6>
+  <%= form_with model: @event, url:  admin_events_path do |f| %>
+
+  <div class="field row mb-2 pt-4">
+    <%= f.label :タイトル ,class: "col-3"  %>
+    <%= f.text_field :title , class: "col-4 form-control"%>
+  </div>
+
+  <div class="field row mb-2">
+    <%= f.label :内容 ,class: "col-3" %>
+    <%= f.text_field :content , class: "col-4 form-control" %>
+  </div>
+  
+  <div class="field row mb-4">
+    <%= f.label :日時 ,class: "col-3" %>
+    <%= f.datetime_select :start_time , class: "col-4 ml-2 form-control" %>
+  </div>
+
+
+  <div class="btn-wrapper mx-auto col-6">
+            <%= f.submit "登録する" ,class:"btn btn-sm btn-primary" %>
+          </div>
+
+<% end %>
+  </div>
+  </div>
+</div>

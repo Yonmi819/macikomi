@@ -1,2 +1,10 @@
-<h1>User::Homes#about</h1>
-<p>Find me in app/views/user/homes/about.html.erb</p>
+<div class="container mt-3 pb-3 col-7 mr-auto">
+  <%= month_calendar events: @events do |date, events| %>
+    <%= date.day %>
+      <% events.each do |event| %>
+        <div>
+          <%= event.title %>
+        </div>
+        <% end %>
+          <% end %>
+</div>
