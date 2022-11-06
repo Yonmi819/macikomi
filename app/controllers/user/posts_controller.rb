@@ -23,9 +23,9 @@ class User::PostsController < ApplicationController
   end
   
   def destroy
-    @post = Post.find(params[:id])  # データ（レコード）を1件取得
-    @post.destroy  # データ（レコード）を削除
-    redirect_to user_posts_path  # 投稿一覧画面へリダイレクト  
+    @post = Post.find(params[:id])
+    @post.destroy  
+    redirect_to user_posts_path 
   end
   
   private
@@ -35,3 +35,4 @@ class User::PostsController < ApplicationController
   end
     
 end
+

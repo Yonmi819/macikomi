@@ -1,20 +1,20 @@
 class User::PostCommentsController < ApplicationController
     
-  def create
-   @post = Post.find(params[:id])
+  def create 
+   @post = Post.find(params[:post_id])
    @comment = current_user.post_comments.new(post_comment_params)
-   @comment.post.id = @post.id
+   @comment.post_id = @post.id
    @comment.save
  
   end
 
 
  def destroy
-  PostComment.find(params[:id]).destroy
-  @post = Post.find(params[:post_id])
+  @comment = PostComment.find(params[:id])
+  @comment.destroy
+ 
  
  end
- 
  private
  
  def post_comment_params
@@ -23,3 +23,5 @@ class User::PostCommentsController < ApplicationController
 
 
 end
+
+  
