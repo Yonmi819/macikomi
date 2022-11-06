@@ -1,0 +1,19 @@
+<table>
+  <tbody>
+    <%= form_with model:[post, post_comment], local: false do |f| %>
+    <tr>
+      <td>
+        
+          <div class="form-group">
+            <%= f.text_area :comment, class: "form-control" ,rows:'3'%>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.submit "送信" %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

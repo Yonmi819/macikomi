@@ -1,0 +1,47 @@
+<div class="container">
+  <h4 class="text-center">うちの子詳細情報</h4>
+  <div class="justify-content-center">
+    <div class="col-md-3 mr-5 mt-3">
+      <% if @post.image.attached? %>
+        <%= image_tag @post.image, size: "270x160" %>
+          <% else %>
+            <%= image_tag 'no_image', size: "270x160" %>
+              <% end %>
+    </div>
+    <div class="col-md-6 ml-4">
+      <table class="table-item m-3">
+        <tr>
+          <th>タイトル</th>
+        </tr>
+        <tr>
+          <td>
+            <%= @post.title %>
+          </td>
+        </tr>
+        <tr>
+          <th>特徴</th>
+        </tr>
+        <tr>
+          <td>
+            <%= @post.body %>
+          </td>
+        </tr>
+      
+      </table>
+      <div class="btn-wrapper col-5">
+        <% if  @post.user.id == current_user.id %>
+          <%= link_to "削除", user_post_path(@post), class: "btn btn-outline-danger", method: :delete, data: {confirm: "本当に削除しますか？"} %>
+          <% end %>
+    </div>
+      
+    </div>
+  </div>
+   <div class="col-md-8 offset-md-1">
+     <div class="comments_area">
+        <%= render 'user/post_comments/form', post: @post, post_comment: @post_comment %>
+      </div>
+      <div class="comments_index">
+        <%= render 'user/post_comments/index', post: @post %>
+      </div>
+   </div>
+</div
