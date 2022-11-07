@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 2022_11_05_022042) do
     t.string "first_name", null: false
     t.string "last_name_kana", null: false
     t.string "first_name_kana", null: false
-    t.boolean "fee_flag", default: false, null: false
+    t.boolean "fee_status", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

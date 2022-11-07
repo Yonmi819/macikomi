@@ -1,2 +1,32 @@
-<h1>User::Residents#show</h1>
-<p>Find me in app/views/user/residents/show.html.erb</p>
+<div class="container col-md-5 mt-4 mb-5">
+  
+    <h5 class="mb-5 text-center">ユーザー詳細</h5>
+    <table class="table table-striped">
+      <tr>
+        <th>名前</th>
+        <td>
+          <%= @user.last_name + @user.first_name %>
+        </td>
+      </tr>
+      <tr>
+        <th>フリガナ</th>
+        <td>
+          <%= @user.last_name_kana + @user.first_name_kana %>
+        </td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td>
+          <%= @user.email %>
+        </td>
+      </tr>
+      
+    </table>
+    <div class="field row mb-2">
+      <div class="btn-group mr-2">
+        <%= link_to "編集する", edit_user_resident_path(@user), class: 'btn btn-outline-dark'%>
+      </div>
+      
+    </div>
+  　　
+</div>

@@ -25,7 +25,7 @@ Rails.application.routes.draw do
    namespace :user do
     root to: 'homes#top'
     get "/information" => "homes#about" , as: "about"
-    get '/my_page' => "residents#show", as: "my_page"
+    get '/my_page' => "residents#show"
     resources :residents, only: [:show, :edit, :update]
     resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
     resources :post_comments, only: [:create, :destroy]

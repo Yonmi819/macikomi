@@ -1,7 +1,7 @@
-<div class="container mt-4 mb-5">
+<div class="container col-md-5 mt-4 mb-5">
   
-    <h5 class="mb-3">ユーザー詳細</h5>
-    <table class="table-item-3">
+    <h5 class="mb-5 text-center">ユーザー詳細</h5>
+    <table class="table table-striped">
       <tr>
         <th>名前</th>
         <td>
@@ -23,7 +23,7 @@
       <tr>
         <th>会費ステータス</th>
         <td>
-          <% if @user.fee_flag == false %>
+          <% if @user.fee_status == false %>
             <p class="text-success font-weight-bold">会費未徴収</p>
             <% else %>
               <p class="text-secondar font-weight-bold">会費徴収済み</p>
@@ -32,8 +32,11 @@
       </tr>
     </table>
     <div class="field row mb-2">
+      <div class="btn-group mr-2">
+        <%= link_to "編集する", edit_admin_resident_path(@user), class: 'btn btn-outline-dark'%>
+      </div>
       <div class="btn-group">
-        <%= link_to "内容を編集する", edit_admin_resident_path(@user), class: 'btn btn-success btn-md'%>
+        <%= link_to "一覧に戻る", admin_residents_path, class: 'btn btn-outline-dark'%>
       </div>
     </div>
   　　

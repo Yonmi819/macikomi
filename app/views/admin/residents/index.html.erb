@@ -1,35 +1,35 @@
 <div class="col-md-8 mx-auto">
-  <h4 class="text-center">ユーザー一覧</h4>
-  <table class="table mb-5">
+  <h4 class="text-center">ユーザー情報</h4>
+  <table class="table table-striped">
     <table class="table table-bordered  mb-3">
       <thead style="background-color:#dcc8dc;">
         <tr>
-          <th>名前</th>
-          <th>アドレス</th>
-          <th>会費ステータス</th>
-          <th>メール送信</th>
+          <th class="text-center">名前</th>
+          <th class="text-center">アドレス</th>
+          <th class="text-center">会費ステータス</th>
+          <th class="text-center">送信</th>
         </tr>
       </thead>
       <tbody>
         <% @users.each do |user| %>
           <tr>
-            <td>
+            <td class="text-center">
               <%= link_to  admin_resident_path(user) do%>
                 <%= user.last_name%><%= user.first_name%>
                     <% end %>
             </td>
-            <td>
+            <td class="text-center">
               <%= user.email %>
             </td>
-            <td>
-              <% if user.fee_flag == false %>
+            <td class="text-center">
+              <% if user.fee_status == false %>
                 <p class="text-success font-weight-bold">会費未徴収</p>
                 <% else %>
                   <p class="text-secondar font-weight-bold">会費徴収済み</p>
                   <% end %>
             </td>
-            <td>
-                 <%= link_to new_user_session_path,class: 'nav-link text-dark' do %><i class="far fa-envelope"></i>メール送る
+            <td class="text-center">
+                 <%= link_to new_user_session_path,class: 'nav-link text-dark' do %><i class="far fa-envelope"></i>メールを送る
                     <% end %>
             </td>
           </tr>
