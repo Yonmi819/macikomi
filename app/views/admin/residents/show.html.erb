@@ -1,0 +1,40 @@
+<div class="container mt-4 mb-5">
+  
+    <h5 class="mb-3">ユーザー詳細</h5>
+    <table class="table-item-3">
+      <tr>
+        <th>名前</th>
+        <td>
+          <%= @user.last_name + @user.first_name %>
+        </td>
+      </tr>
+      <tr>
+        <th>フリガナ</th>
+        <td>
+          <%= @user.last_name_kana + @user.first_name_kana %>
+        </td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td>
+          <%= @user.email %>
+        </td>
+      </tr>
+      <tr>
+        <th>会費ステータス</th>
+        <td>
+          <% if @user.fee_flag == false %>
+            <p class="text-success font-weight-bold">会費未徴収</p>
+            <% else %>
+              <p class="text-secondar font-weight-bold">会費徴収済み</p>
+              <% end %>
+        </td>
+      </tr>
+    </table>
+    <div class="field row mb-2">
+      <div class="btn-group">
+        <%= link_to "内容を編集する", edit_admin_resident_path(@user), class: 'btn btn-success btn-md'%>
+      </div>
+    </div>
+  　　
+</div>
