@@ -3,7 +3,7 @@
     <% post.post_comments.each do |post_comment| %>
       <tr>
         <td>
-          <strong><%= post_comment.user.last_name %>さん </strong>
+          <strong><%= post_comment.user.last_name %>さん</strong>
           </td>
           </tr>
         <tr>
@@ -11,7 +11,7 @@
           <%= post_comment.comment %>
         </td>
         <td>
-          <% if post_comment.user == current_user %>
+          <% if post_comment.user.id == current_user.id %>
             <%= link_to "削除",user_post_post_comment_path(post, post_comment), method: :delete, remote: true, class: "btn btn-danger" %>
               <% end %>
         </td>

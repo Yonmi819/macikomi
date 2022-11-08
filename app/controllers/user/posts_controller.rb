@@ -6,8 +6,14 @@ class User::PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    @post.save
+    if @post.save
+      @post.create_notification_post!(current_user)
+      flash[:success] = 'お知らせを投稿しました。'
     redirect_to user_posts_path
+    else
+    flash.now[:danger] = 'お知らせの投稿に失敗しました。'
+    render :new
+  end
   end
 
   def index #新着順

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   
   
+  
   root to: 'homes#top'
   
   devise_for :users,skip: [:passwords], controllers: {
@@ -27,6 +28,7 @@ Rails.application.routes.draw do
     get "/information" => "homes#about" , as: "about"
     get '/my_page' => "residents#show"
     resources :residents, only: [:show, :edit, :update]
+    resources :notifications, only: [:index]
     resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
     resources :post_comments, only: [:create, :destroy]
     end
