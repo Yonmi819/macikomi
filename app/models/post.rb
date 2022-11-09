@@ -9,7 +9,7 @@ class Post < ApplicationRecord
    has_one_attached :image
    
    #投稿した時の通知を作成するメソッド↓
-   def create_notification_post!(current_user)
+def create_notification_post!(current_user)
   # 全ユーザーを取得
   temp_ids = User.all.select(:id).distinct
   temp_ids.each do |temp_id|

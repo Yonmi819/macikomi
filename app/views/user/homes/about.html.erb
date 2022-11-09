@@ -1,4 +1,7 @@
-<div class="container mt-3 pb-3 col-7 mr-auto">
+<div class="container">
+  <div class="row">
+  <div class="calendar-content col-md-7 justify-content-left">
+    
   <%= month_calendar events: @events do |date, events| %>
     <%= date.day %>
       <% events.each do |event| %>
@@ -7,4 +10,15 @@
         </div>
         <% end %>
           <% end %>
+           </div>
+        <div class="-bousai col-md-5 justify-content-right">
+          <h4>防災情報</h4>
+       <p>この地区の避難場所はここです！避難時はあせらずに行動しましょう！！</p>
+       <%#= image_tag '' ,size: "270x160" %>
+          
+          <h5>もしもの備え　あると助かる避難グッズ</h5>
+          <a style="color:#691c0d;" href="https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf">こちらを参考</a>
+          
+          </div>
+          </div>
 </div>

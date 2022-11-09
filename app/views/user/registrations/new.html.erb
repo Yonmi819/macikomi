@@ -1,5 +1,5 @@
-<div class="container mt-4 mb-5">
-  <h5 class="mb-5">コミュニティ登録ページ</h5>
+<div class="container col-md-8 mt-4 mb-5">
+  <h5 class="mb-5 text-center">コミュニティ登録ページ</h5>
   <div style="width:1000px">
   
 <%= form_with model: @user, url: user_registration_path do |f| %>
@@ -27,14 +27,14 @@
     <%= f.label :パスワード6文字以上, class: "col-3" %>
     <%= f.password_field :password, class: "col-3 form-control form-control-sm" %>
   </div>
-  <div class="field row mb-2">
+  <div class="field row mb-3">
     <%= f.label :パスワード確認用, class: "col-3" %>
     <%= f.password_field :password_confirmation, class: "col-3 form-control form-control-sm" %>
   </div>
-  <div class="field row mb-2">
+  <div class="field row mb-4">
     <div class="col-3"></div>
     <div class="actions text-center">
-      <%= f.submit "新規登録", class: 'btn btn-success btn-md'%>
+      <%= f.submit "新規登録", class: 'btn btn-outline-primary btn-md'%>
     </div>
   </div>
 <% end %>
@@ -42,5 +42,5 @@
   
   
 </div>
-<h5 class="d-flex justify-content-left mb-1">既に登録済みの方は<a style="color:#691c0d;" href="/users/sign_in">こちら</a>からログインしてください</h5>
+<h5 class="d-flex justify-content-center mb-1">既に登録済みの方は<a style="color:#691c0d;" href="/users/sign_in">こちら</a>からログインしてください</h5>
 </div>

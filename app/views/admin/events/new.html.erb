@@ -1,8 +1,7 @@
-<div class="container mt-5">
-  <div class="row">
-    <div class="mx-auto col-6"> 
-    <h6 class="">イベントをつくる</h6>
-  <%= form_with model: @event, url:  admin_events_path do |f| %>
+<div class="container col-md-6 mt-4 mb-5">
+  <h5 class="mb-5 text-center">イベントを作成する</h5>
+  <div style="width:1000px" >
+  <%= form_with model: @event, url: admin_events_path, method: :post do |f| %>
 
   <div class="field row mb-2 pt-4">
     <%= f.label :タイトル ,class: "col-3"  %>
@@ -19,12 +18,14 @@
     <%= f.datetime_select :start_time , class: "col-4 ml-2 form-control" %>
   </div>
 
-
-  <div class="btn-wrapper mx-auto col-6">
-            <%= f.submit "登録する" ,class:"btn btn-sm btn-primary" %>
-          </div>
-
+<div class="field row mb-4">
+      <div class="col-3"></div>
+      <div class="actions text-center">
+        <%= f.submit "登録する", class: "btn btn-outline-primary btn-md"%>
+      </div>
+</div>
+ 
 <% end %>
   </div>
-  </div>
+  
 </div>

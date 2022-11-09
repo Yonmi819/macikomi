@@ -1,5 +1,7 @@
 ja:
-  
+  simple_calendar:
+    previous: "<<"
+    next: ">>"
   devise:
     sessions:
       user:
