@@ -42,3 +42,5 @@
 ## 使用素材
 - サイト名　Panasonic 防災グッズリスト 本当に必要な「もしもの備え」とは？
 - URL→　https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf
+- サイト名　Panasonic 防災グッズリスト 本当に必要な「もしもの備え」とは？
+- URL→　https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf

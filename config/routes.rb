@@ -25,7 +25,9 @@ Rails.application.routes.draw do
     resources :residents, only: [:show, :edit, :update]
     resources :notifications, only: [:index]
     resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
+    resource  :checks, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]
+    
     end
   end
   
