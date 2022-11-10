@@ -6,8 +6,12 @@
         <h5>うちの子探してます！！より新着投稿があります</h5>
         <p><%= notification.post.title%></p>
       <% end %>
+      <% case notification.action %>
+      <% when 'comment' then %>
+        <h5>うちの子探してます！！より新着コメントがあります</h5>
+        <p><%= notification.visitor.last_name%>さんがあなたの投稿にコメントしました！</p>
+      <% end %>
         
    </li>
    
-   
-   <p class="n-time"></p><%= time_ago_in_words(notification.created_at).upcase %>前</p>
+  <p class="n-time"></p><%= time_ago_in_words(notification.created_at).upcase %>前</p>
