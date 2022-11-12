@@ -1,4 +1,6 @@
 class User::PostsController < ApplicationController
+   before_action :set_q,:search, only: [:index, :search]
+  
   def new
     @post  = Post.new
   end
@@ -13,18 +15,30 @@ class User::PostsController < ApplicationController
     else
     flash.now[:danger] = 'お知らせの投稿に失敗しました。'
     render :new
-  end
+    end
+   
   end
 
   def index #新着順
      @posts = Post.order(created_at: :desc).page(params[:page]).per(4)
+     
+  
   end
+     
 
   def show
     @post = Post.find(params[:id])
     @post_comment = PostComment.new
     
   end
+  
+  def search
+     @results = @q.result.order(created_at: :desc).page(params[:page]).per(4)
+  end
+     
+  
+ 
+  
 
   def edit
   end
@@ -37,9 +51,15 @@ class User::PostsController < ApplicationController
   
   private
   
-  def post_params
-    params.require(:post).permit(:title, :body, :post_image)
+  def set_q # params[:q]のqには検索フォームに入力した値が入る
+    @q = Post.ransack(params[:q])
   end
+  
+  def post_params
+    params.require(:post).permit(:title, :body, :post_image,tag_ids: [])
+  end
+  
+  
     
-end
+ end
 

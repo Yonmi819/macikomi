@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>検索結果</h1>
+  <div class="row justify-content-center">
+    <div class="col-sm-10 d-flex flex-wrap bd-highlight">
+      <% if @results.length != 0 %><%#なんでlengthを使っているのか？%>
+        <% @results.each do |post| %>
+          <div class="col-sm-5 mx-auto">
+            <%= link_to user_post_path(post) do %>
+              <% if post.image.attached? %>
+                <%= image_tag post.image, size: "270x160" %><br>
+                  <% else %>
+                    <%= image_tag 'no_image', size: "270x160" %><br>
+                      <% end %>
+                        <p class="overflow-wrap">
+                          <%= post.title %>
+                        </p>
+                        <% end %>
+          </div>
+          <% end %>
+            <% else %> 検索結果はありません
+              <% end %>
+    </div>
+  </div>
+  <%#ページネーション%>
+    <div class="row pr-5 mb-2 justify-content-end">
+      <%= paginate @results %>
+    </div>
+</div>

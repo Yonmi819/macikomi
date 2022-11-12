@@ -11,6 +11,11 @@
         <h5>うちの子探してます！！より新着コメントがあります</h5>
         <p><%= notification.visitor.last_name%>さんがあなたの投稿にコメントしました！</p>
       <% end %>
+      <% case notification.action %>
+      <% when 'event' then %>
+        <h5>運営部より新着イベントがあります</h5>
+        <p><%= notification.event.title%></p>
+      <% end %>
         
    </li>
    

@@ -8,6 +8,7 @@ class Admin::EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.admin_id = current_admin.id
     @event.save
+    @event.create_notification_event!(current_admin)
     redirect_to new_admin_event_path
   end
 

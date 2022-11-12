@@ -10,3 +10,10 @@ Admin.create!(
   email:  "",
   password: ""
   )
+
+#ここから追記
+Tag.create!([
+    { name: 'ネコ' },
+    { name: '犬' },
+    { name: '動物'},
+   ])

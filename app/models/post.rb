@@ -4,6 +4,8 @@ class Post < ApplicationRecord
    has_many :post_comments, dependent: :destroy
    has_many :notifications, dependent: :destroy
    has_many :checks, dependent: :destroy
+    has_many :post_tags, dependent: :destroy
+    has_many :tags, through: :post_tags
    
    
    validates :title, presence: true
@@ -14,10 +16,11 @@ class Post < ApplicationRecord
    def checked_by?(user)
        checks.exists?(user_id: user.id)
    end
+   
     
    
    #投稿した時の通知を作成するメソッド↓
-   def create_notification_post!(current_user)
+   def create_notification_post!(current_user)#←引数:新しくつくられる変数
   # 全ユーザーを取得
   temp_ids = User.all.select(:id).distinct
   temp_ids.each do |temp_id|

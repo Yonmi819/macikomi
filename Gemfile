@@ -65,5 +65,7 @@ gem 'net-smtp'
 gem 'simple_calendar', '~> 2.0'
 gem 'rails-i18n'
 
+gem 'ransack'
+
 
 

@@ -19,6 +19,9 @@ class User < ApplicationRecord
     end
   end
   
+  def active_for_authentication?
+    super && (delete_flag == false)
+  end
   
   validates :last_name, presence: true
   validates :first_name, presence: true

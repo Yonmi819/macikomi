@@ -1,9 +1,24 @@
 <div class="container">
   <div class="top-title row">
     <h4 class="text-center">この子たちをみかけませんでしたか？？</h4>
-    <div class="btn-wrapper col-2">
-      <%= link_to "うちの子をさがす",  new_user_post_path, class: "btn btn-outline-secondary btn-sm btn-block mb-3" %>
+    
+    <div class="input-group col-3 pb-2 mr-5">
+  
+        <%= search_form_for @q, url: search_user_posts_path do |f| %>
+          <%= f.search_field :title_cont, placeholder: "キーワードを入力" %>
+          <%= select_tag :tag_id,
+    options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+    {
+      prompt: 'タグで絞り込み',
+      onchange: 'submit(this.form);'
+    }%>
+          <%= f.submit "検索", class: "btn btn-light" %>
+        <% end %>
     </div>
+      <div class="btn-wrapper col-2">
+      <%= link_to "登録する",  new_user_post_path, class: "btn btn-outline-secondary btn-sm btn-block mb-3" %>
+    </div>
+
   </div>
   <div class="row justify-content-center">
     <div class="col-sm-10 d-flex flex-wrap bd-highlight">
@@ -18,6 +33,9 @@
                       <p class="overflow-wrap">
                         <%= post.title %>
                       </p>
+                      <% post.tags.each do |tag| %>
+    <%= tag.name %>
+<% end %>
                       <% end %>
         </div>
         <% end %>

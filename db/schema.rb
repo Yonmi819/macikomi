@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_09_081534) do
+ActiveRecord::Schema.define(version: 2022_11_12_085733) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 2022_11_09_081534) do
   create_table "notifications", force: :cascade do |t|
     t.integer "visitor_id", null: false
     t.integer "visited_id", null: false
+    t.boolean "sender_admin_flag", default: true, null: false
     t.integer "post_id"
     t.integer "post_comment_id"
     t.integer "event_id"
@@ -100,10 +101,25 @@ ActiveRecord::Schema.define(version: 2022_11_09_081534) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "post_tags", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_post_tags_on_post_id"
+    t.index ["tag_id"], name: "index_post_tags_on_tag_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
     t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -119,6 +135,7 @@ ActiveRecord::Schema.define(version: 2022_11_09_081534) do
     t.string "last_name_kana", null: false
     t.string "first_name_kana", null: false
     t.boolean "fee_status", default: false, null: false
+    t.boolean "delete_flag", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -127,4 +144,6 @@ ActiveRecord::Schema.define(version: 2022_11_09_081534) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "post_tags", "posts"
+  add_foreign_key "post_tags", "tags"
 end

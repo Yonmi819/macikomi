@@ -13,7 +13,19 @@ class User::ResidentsController < ApplicationController
        flash[:notice] ="ユーザー情報を変更しました"
        redirect_to user_my_page_path
     end
- end
+  end 
+  
+  def unsubscribe
+     @user = current_user
+  end
+
+  def withdrawal
+    @user = current_user
+    @user.update(delete_flag: true)
+    reset_session
+    flash[:notice] = "退会処理を実行いたしました"
+    redirect_to root_path
+  end
  
  private
  
