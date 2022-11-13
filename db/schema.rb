@@ -76,9 +76,8 @@ ActiveRecord::Schema.define(version: 2022_11_12_085733) do
   end
 
   create_table "notifications", force: :cascade do |t|
-    t.integer "visitor_id", null: false
+    t.integer "visitor_id"
     t.integer "visited_id", null: false
-    t.boolean "sender_admin_flag", default: true, null: false
     t.integer "post_id"
     t.integer "post_comment_id"
     t.integer "event_id"

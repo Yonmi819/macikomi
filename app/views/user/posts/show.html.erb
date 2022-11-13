@@ -39,11 +39,7 @@
                       </td>
                      
                     </tr>
-                    <tr>
-                      <% @post.tags.each do |tag| %>
-                      <%= tag.name %>
-                      <% end %>
-                    </tr>
+                    
                   </table>
                   <div class="field row mt-2">
                     <% if  @post.user == current_user %>

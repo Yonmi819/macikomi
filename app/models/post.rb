@@ -23,13 +23,16 @@ class Post < ApplicationRecord
    def create_notification_post!(current_user)#←引数:新しくつくられる変数
   # 全ユーザーを取得
   temp_ids = User.all.select(:id).distinct
+  
   temp_ids.each do |temp_id|
+      
     save_notification_post!(current_user, temp_id['id'])
     end
    end
 
    def save_notification_post!(current_user, visited_id)
-  notification = current_user.active_notifications.new(
+     
+    notification = current_user.active_notifications.new(
       visited_id: visited_id,
       post_id: id,
       action: 'post'
@@ -72,3 +75,4 @@ class Post < ApplicationRecord
  
 
 end 
+
