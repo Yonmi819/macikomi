@@ -7,10 +7,10 @@
     <%= csp_meta_tag %>
 
 　　<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+　　<%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body style="background-color:#F5F5F5;">
+  <body>
     <header>
       <% if user_signed_in? %>
       <%= render 'layouts/user' %>
@@ -21,7 +21,7 @@
                 <% end %>
     </header>
     <main>
-    <p id="notice"><%= notice %></p>
+    <p id="notice notice-info"><%= notice %></p>
     <%# 各ページ本体　%>
       <%= yield %>
     </main>
