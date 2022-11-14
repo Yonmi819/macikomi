@@ -14,6 +14,8 @@ class User::ResidentsController < ApplicationController
        redirect_to user_my_page_path
     end
   end 
+
+    
   
   def unsubscribe
      @user = current_user

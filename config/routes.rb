@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   
   namespace :admin do
     root to: 'homes#top'
+    get '/residents/form' => "residents#form"
+    post '/residents/send_mail' => "residents#send_mail"
     resources :events, only: [:new, :create]
     resources :residents, only: [:index, :show, :edit, :update]
     

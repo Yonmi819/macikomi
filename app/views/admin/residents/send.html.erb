@@ -1,0 +1,23 @@
+
+<div class="container col-md-6 mt-4 mb-5">
+  <h5 class="mb-5 text-center">メール送信フォーム</h5>
+  <div style="width:1000px" >
+  <%= form_with model: @admin, url: admin_session_path do |f| %>
+    <div class="field row mb-2">
+      <%= f.label :件名, class: "col-3" %>
+        <%= f.text_field :email, class: "col-3 form-control form-control-sm"%>
+    </div>
+    <div class="field row mb-4">
+      <%= f.label :本文, class: "col-3" %>
+        <%= f.text_area :message, class: "col-3 form-control " %>
+         
+    </div>
+    <div class="field row mb-4">
+      <div class="col-3"></div>
+      <div class="actions text-center">
+        <%= f.submit "送信", class: 'btn btn-outline-primary btn-md'%>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
