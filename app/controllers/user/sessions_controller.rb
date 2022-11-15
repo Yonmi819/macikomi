@@ -2,6 +2,8 @@
 
 class User::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
+      before_action :reject_user, only: [:create]
+  
   def guest_sign_in
     user = User.guest
     sign_in user
@@ -28,29 +30,18 @@ class User::SessionsController < Devise::SessionsController
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
    
-   # 退会しているかを判断するメソッド
-# def user_state
-  ## 【処理内容1】 入力されたemailからアカウントを1件取得
- # @user = User.find_by(email: params[:user][:email])
-  ## アカウントを取得できなかった場合、このメソッドを終了する
-  #return if !@user
-  ## 【処理内容2】 取得したアカウントのパスワードと入力されたパスワードが一致してるかを判別
-  #if @user.valid_password?(params[:user][:password])
-    ## 【処理内容3】
-  #end
-  #end
   protected
 
   def reject_user
-    @user = User.find(params[:id])
-      if @user
-        if @user.valid_password?(params[:email][:password]) &&  (@user.active_for_authentication? == true)
+    @user = User.find_by(email: params[:user][:email])
+     if @user
+       if @user.valid_password?(params[:user][:password]) && (@user.active_for_authentication? == false)
          flash[:notice] = "退会済みです。再度ご登録をしてご利用ください。" 
          redirect_to new_user_registration_path
-        else
-         flash[:notice] = "項目を入力してください"
-        end
-      end
+       else
+         flash[:notice] = "パスワードを正しく入力してください"
+       end
+     end 
   end
 
 end

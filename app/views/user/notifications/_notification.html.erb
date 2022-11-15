@@ -3,16 +3,16 @@
     <li class="list-group-item">
       <% case notification.action %>
       <% when 'post' then %>
-      <h5>うちの子探してます！！より新着投稿があります</h5>
-      <p><strong><%= notification.post.user.last_name%>さん</strong>が投稿しました  <%= notification.post.title%></p>
+      <h6><strong>うちの子探してます！！より新着投稿があります</strong></h6>
+      <p><%= notification.post.user.last_name%>さんが投稿しました</p>
       
       <% when 'comment' then %>
-      <h5>うちの子探してます！！より新着コメントがあります</h5>
-      <p><%= notification.visitor.last_name%>さんがあなたの投稿にコメントしました！</p>
+      <h6><strong>うちの子探してます！！より新着コメントがあります</strong></h6>
+      <p><%= notification.visitor.last_name%>さんがあなたの投稿にコメントしました</p>
       
        
       <% when 'event' then %>
-        <h5>運営部より新着イベントがあります</h5>
+        <h6><strong>たけのこクラブより新着イベントが作成されました</strong></h6>
         <p><%= notification.event.title%></p>
       <% end %>
       <p class="n-time"></p><%= time_ago_in_words(notification.created_at).upcase %>前</p>  

@@ -22,7 +22,17 @@
 }
 
 body{
- padding-top :70px;
- background-color :#FFC0CB;
+ padding-top :45px;
+ background-color :#1E90FF;
 }
 
+.field_with_errors {
+  display: contents;
+}
+
+
+.notice {
+   font-size: 20px;
+   color :#ffffff;
+   text-align: center;
+ }
