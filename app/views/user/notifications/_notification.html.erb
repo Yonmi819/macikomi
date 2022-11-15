@@ -4,7 +4,7 @@
       <% case notification.action %>
       <% when 'post' then %>
       <h5>うちの子探してます！！より新着投稿があります</h5>
-      <p><%= notification.post.title%></p>
+      <p><strong><%= notification.post.user.last_name%>さん</strong>が投稿しました  <%= notification.post.title%></p>
       
       <% when 'comment' then %>
       <h5>うちの子探してます！！より新着コメントがあります</h5>

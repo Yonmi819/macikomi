@@ -1,20 +1,17 @@
 
-<div class="container col-md-6 mt-4 mb-5">
-  <h5 class="mb-5 text-center">メール送信フォーム</h5>
-  <div style="width:1000px" >
+<div class="container">
+  <h4 class="mb-5 text-center">メール送信フォーム</h4>
+  <div class="row justify-content-center pt-2">
   <%= form_with url: admin_residents_send_mail_path(id: @user), method: :post do |f| %>
 
-    <div class="field row mb-4">
+    <div class="form-group">
       <%= f.label :本文, class: "col-3" %>
-        <%= f.text_area :message, class: "col-3 form-control " %>
+        <%= f.text_area :message, class: "form-control  comment-textarea" ,rows: '3', cols: '50'%>
          
     </div>
-    <div class="field row mb-4">
-      <div class="col-3"></div>
-      <div class="actions text-center">
-        <%= f.submit "送信", class: 'btn btn-outline-primary btn-md'%>
-      </div>
-    </div>
+    <div class="row justify-content-start">
+            <%= f.submit '送信', class: "btn btn-outline-dark" %>
+        </div>
     <% end %>
   </div>
 </div>

@@ -12,6 +12,9 @@ class User::ResidentsController < ApplicationController
     if @user.update(user_params)
        flash[:notice] ="ユーザー情報を変更しました"
        redirect_to user_my_page_path
+    else
+      flash[:notice] ="必要事項を入力してください"
+      render :edit
     end
   end 
 

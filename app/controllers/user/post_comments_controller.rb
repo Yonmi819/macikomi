@@ -7,7 +7,7 @@ class User::PostCommentsController < ApplicationController
     if @comment.save
       #通知機能をつくるメソッドを呼び出す
        @post.create_notification_comment!(current_user, @comment.id)
-   end　
+    end
   end
 
 
