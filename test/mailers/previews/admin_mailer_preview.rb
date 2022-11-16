@@ -2,3 +2,4 @@
 class AdminMailerPreview < ActionMailer::Preview
 
 end
+a

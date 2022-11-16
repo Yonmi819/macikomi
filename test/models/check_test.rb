@@ -5,3 +5,4 @@ class CheckTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+a
