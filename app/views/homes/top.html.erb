@@ -1,23 +1,23 @@
-<div class="container">
-  <h1 class="about-title pt-3 text-center" style="color:#402717;">--トップ--</h1>
-  <h4 class="about-text pt-3 mb-1 text-center" style="color:#6e5064;">地域の最新情報をいち早くキャッチ</h4>
-  <div class="btn-wrapper">
-    <div class="field row justify-content-center">
-      <div class="col-2">
-        <%= link_to "新規登録", new_user_registration_path, class: "btn btn-outline-secondary btn-sm btn-block mb-3" %>
-      </div>
-      <div class="col-2">
-        <%= link_to "ログイン", new_user_session_path, class: "btn btn-outline-secondary btn-sm btn-block mb-3" %>
-      </div>
-      
-    </div>  
-      <div class="field row justify-content-center">
-        <div class="col-2">
-          <%= link_to "ゲストログイン", user_guest_sign_in_path, class: "btn btn-outline-secondary btn-sm btn-block mb-3", method: :post %>
+<%= stylesheet_link_tag 'homes' %>
+  <div class="container">
+    <h4>地域情報をいち早くキャッチ</h4>
+    <%= image_tag "logo.jpg" , size: "220x220" %>
+      <div class="btn-wrapper">
+        <div class="field row justify-content-center">
+          <div class="col-2">
+            <%= link_to "新規登録", new_user_registration_path, class: "btn btn-outline-warning btn-sm btn-block mb-3" %>
+          </div>
+          <div class="col-2">
+            <%= link_to "ログイン", new_user_session_path, class: "btn btn-outline-warning btn-sm btn-block mb-3" %>
+          </div>
         </div>
-        <div class="col-2">
-        <%= link_to "管理者ログイン", new_admin_session_path, class: "btn btn-outline-secondary btn-sm btn-block mb-3" %>
+        <div class="field row justify-content-center">
+          <div class="col-2">
+            <%= link_to "ゲストログイン", user_guest_sign_in_path, class: "btn btn-outline-warning btn-sm btn-block mb-3", method: :post %>
+          </div>
+          <div class="col-2">
+            <%= link_to "管理者ログイン", new_admin_session_path, class: "btn btn-outline-warning btn-sm btn-block mb-3" %>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
   </div>

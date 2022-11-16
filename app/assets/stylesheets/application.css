@@ -23,16 +23,34 @@
 
 body{
  padding-top :45px;
- background-color :#1E90FF;
+ background-color :#7B68EE;
 }
 
 .field_with_errors {
   display: contents;
 }
 
-
 .notice {
    font-size: 20px;
    color :#ffffff;
    text-align: center;
+   font-family: 'Kosugi Maru', sans-serif;
  }
+ 
+.navbar-nav{
+   margin-left : auto;
+   line-height: 70px;
+   
+}
+.nav-list{
+   margin-left :7px;
+   font-size: 14px;
+  
+}
+
+a{
+  color: #FFFF00;   
+}
+
+
+
