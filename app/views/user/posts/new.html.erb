@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag 'user/posts' %>
   <div class="container">
     <h4>うちの子登録</h4>
-    <div class="row justify-content-center pt-2">
-      <%= form_with model: @post, url: user_posts_path do |f| %>
+    <div class="new-contents pt-2">
+      <%= form_with model: @post, url: user_posts_path, method: :post do |f| %>
         <div class="form-group">
           <%= f.label :投稿画像 %>
             <%= f.file_field :image, accept: "image/*" , class: "col-10" %>

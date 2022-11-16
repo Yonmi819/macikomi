@@ -25,3 +25,12 @@ h5{
 p{
    font-family: 'Kiwi Maru', serif;   
 }
+
+.simple-calendar table tbody{ 
+   background-color: white; 
+    
+}
+
+thead{
+background-color: blueviolet;
+}

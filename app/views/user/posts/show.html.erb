@@ -12,9 +12,7 @@
                   <table class="table-item">
                     <tr>
                       <th>投稿者</th>
-                       <th class="check_btn">
-                        <%= render "user/checks/form", post: @post %>
-                      </th>
+                       
                     </tr>
                     <tr>
                       <td>
@@ -40,11 +38,15 @@
                       </td>
                      
                     </tr>
-                    
+                    <tr>
+                    <th class="check_btn">
+                        <%= render "user/checks/form", post: @post %>
+                      </th>
+                      </tr>
                   </table>
-                  <div class="field row mt-2">
+                  <div class="form-group">
                     <% if  @post.user == current_user %>
-                      <%= link_to "削除", user_post_path(@post), class: "btn btn-outline-danger btn-sm ", method: :delete, data: {confirm: "本当に削除しますか？"} %>
+                      <%= link_to "削除する", user_post_path(@post), class: "btn btn-danger btn-sm ", method: :delete, data: {confirm: "本当に削除しますか？"} %>
                         <% end %>
                   </div>
       </div>
