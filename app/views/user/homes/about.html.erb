@@ -1,4 +1,4 @@
-
+<%= stylesheet_link_tag 'user/homes' %>
 <div class="container">
   <div class="row">
   <div class="calendar-content col-md-7 justify-content-left">
@@ -6,7 +6,7 @@
   <%= month_calendar events: @events do |date, events| %>
     <%= date.day %>
       <% events.each do |event| %>
-        <div>
+        <div class="title-text">
           <%= event.title %>
         </div>
         <% end %>
@@ -19,6 +19,7 @@
           
           <h5>もしもの備え　あると助かる避難グッズ</h5>
           <a style="color:#691c0d;" href="https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf">こちらを参考</a>
+          <a style="color:#691c0d;" href="https://www.env.go.jp/nature/dobutsu/aigo/1_law/disaster.html">動物と暮らしている人</a>
           
           </div>
           </div>

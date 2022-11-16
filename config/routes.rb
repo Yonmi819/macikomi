@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     patch '/residents/withdrawal' => 'residents#withdrawal', as: 'withdrawal'
     resources :residents, only: [:show, :edit, :update]
     resources :notifications, only: [:index]
-    resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
+    resources :posts, only: [:new, :create, :index, :show, :destroy] do
     collection do
     get 'search'
     end

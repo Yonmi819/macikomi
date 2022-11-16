@@ -4,8 +4,7 @@ class Post < ApplicationRecord
    has_many :post_comments, dependent: :destroy
    has_many :notifications, dependent: :destroy
    has_many :checks, dependent: :destroy
-    has_many :post_tags, dependent: :destroy
-    has_many :tags, through: :post_tags
+    
    
    
    validates :title, presence: true

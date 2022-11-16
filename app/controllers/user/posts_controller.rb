@@ -31,9 +31,6 @@ class User::PostsController < ApplicationController
      @results = @q.result.order(created_at: :desc).page(params[:page]).per(4)
   end
      
-  def edit
-  end
-  
   def destroy
     @post = Post.find(params[:id])
     @post.destroy  

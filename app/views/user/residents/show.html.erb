@@ -1,7 +1,7 @@
-
-<div class="container col-md-5 mt-4 mb-5">
+<%= stylesheet_link_tag 'user/residents' %>
+<div class="container col-md-5">
   
-    <h5 class="mb-5 text-center">ユーザー詳細</h5>
+    <h4>ユーザー詳細</h4>
     <table class="table table-striped">
       <tr>
         <th>名前</th>
@@ -23,11 +23,11 @@
       </tr>
       
     </table>
-    <div class="field row mb-2">
-      <div class="btn-group mr-2">
-        <%= link_to "編集する", edit_user_resident_path(@user), class: 'btn btn-outline-dark'%>
+    
+      <div class="btn-group">
+        <%= link_to "編集する", edit_user_resident_path(@user), class: 'btn btn-outline-warning'%>
       </div>
       
-    </div>
+  
   　　
 </div>

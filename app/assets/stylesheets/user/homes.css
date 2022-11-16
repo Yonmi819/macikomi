@@ -1,1 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 
+.title-text{
+  font-family: 'Kiwi Maru', serif;
+  color: #FFD700;
+}
+
+h4{
+    padding-top: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #8B0000;
+    font-family: 'Kiwi Maru', serif;
+}
+
+h5{
+    padding-top: 20px;
+    text-align : center;
+    color: #8B0000;
+    font-family: 'Kiwi Maru', serif;
+}
+
+
+
+p{
+   font-family: 'Kiwi Maru', serif;   
+}

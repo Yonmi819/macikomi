@@ -1,8 +1,9 @@
-<div class="container mb-5">
-  <h5 class="mb-4 text-center">うちの子詳細</h5>
-  <div style="width:1000px">
-    <div class="d-flex mx-auto pt-2">
-      <div class="col-md-6 ml-auto">
+<%= stylesheet_link_tag 'user/posts' %>
+<div class="container">
+  <h4>うちの子詳細</h4>
+  
+    <div class="page-contents">
+      <div class="left-contents">
         <% if @post.image.attached? %>
           <%= image_tag @post.image, size: "270x160" %>
             <% else %>
@@ -47,12 +48,12 @@
                         <% end %>
                   </div>
       </div>
-      <div class="comment-container">
+      <div class="right-contents">
         <%= render 'user/post_comments/form', post: @post, post_comment: @post_comment %>
           <div class="post-comments-index">
             <%= render 'user/post_comments/index', post: @post %>
           </div>
       </div>
     </div>
-  </div>
+  
 </div>
