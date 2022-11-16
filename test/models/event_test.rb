@@ -5,4 +5,3 @@ class EventTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
-a

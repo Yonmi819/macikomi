@@ -5,4 +5,3 @@ class TagTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
-a

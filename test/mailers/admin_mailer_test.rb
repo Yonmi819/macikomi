@@ -5,4 +5,3 @@ class AdminMailerTest < ActionMailer::TestCase
   #   assert true
   # end
 end
-a
