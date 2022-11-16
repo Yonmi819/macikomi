@@ -6,3 +6,4 @@ class HomesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 end
+a
