@@ -5,4 +5,5 @@
 //= link user/registrations.css
 //= link user/sessions.css
 //= link user/posts.css
+//= link user/notifications.css
 //= link admin/sessions.css

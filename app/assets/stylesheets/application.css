@@ -29,6 +29,11 @@ body{
  background-color :#7B68EE;
 }
 
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
 .field_with_errors {
   display: contents;
 }

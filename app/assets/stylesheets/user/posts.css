@@ -19,9 +19,6 @@ p{
     font-family: 'Kiwi Maru', serif;
 }
 
-.input-group{
-    display: flex;
-}
 
 .form-group{
     margin-bottom: 10px;
@@ -36,13 +33,39 @@ p{
     font-family: 'Kiwi Maru', serif;   
 }
 .new-contents{
-   width: 1000px;
-   display: flex;
+   width: 700px;
+   padding-top: 20px;
    margin: 0 auto;
-   
+ }
+ 
+.top-contents{
+   display: flex;
+   margin: 0 auto
+ }
+
+.input-group{
+   width: 280px;
+   padding-top: 20px;
+   display: flex;
 }
-.page-contents{
-    width: 1000px;
+
+.btn-wrapper{
+   width: 150px;
+   padding-top: 20px;
+}
+
+.index-contents{
+    width: 750px;
+    margin: 0 auto;
+}
+
+.item-box{
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.show-contents{
     display: flex;
     margin: 0 auto;
     }
