@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+
+.field{
+    margin-bottom: 10px;
+    display: flex;
+    color: #8B0000;
+    font-family: 'Kiwi Maru', serif;
+    
+}
+
+
+h4{ 
+    padding-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #FFD700;
+    font-family: 'Kiwi Maru', serif;
+}
+
+p{
+    color: #FFFF00;
+}
+.index-contents{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.show-contents{
+    width: 550px;
+    margin: 0 auto;
+}
+
+
+.btn-group{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: #8B0000;
+    font-family: 'Kiwi Maru', serif;
+}
+
+
+.table{
+    background-color: #000080;
+}
+
+th{
+  padding-top: 5px;
+  font-size: 17px;
+  text-align: center;
+  background-color: #20B2AA;
+  font-family: 'Kiwi Maru', serif; 
+}
+
+
+td{
+  
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Kiwi Maru', serif;
+  
+}
+
+.pagenate{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  color: #8B0000;
+}

@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+
+.new-contents{
+    width: 920px;
+    margin: 0 auto;
+}
+
 .field{
     margin-bottom: 10px;
+    display: flex;
     color: #8B0000;
     font-family: 'Kiwi Maru', serif;
     
@@ -17,4 +24,8 @@ h5{
     display: flex;
     justify-content: center;
     font-family: 'Kiwi Maru', serif;
+}
+
+.actions{
+    text-align: center;
 }

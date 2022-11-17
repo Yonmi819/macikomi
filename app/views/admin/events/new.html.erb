@@ -1,31 +1,25 @@
-<div class="container col-md-6 mt-4 mb-5">
-  <h5 class="mb-5 text-center">イベントを作成する</h5>
-  <div style="width:1000px" >
-  <%= form_with model: @event, url: admin_events_path, method: :post do |f| %>
-
-  <div class="field row mb-2 pt-4">
-    <%= f.label :タイトル ,class: "col-3"  %>
-    <%= f.text_field :title , class: "col-4 form-control"%>
+<%= stylesheet_link_tag 'admin/events' %>
+  <div class="container">
+    <h4>イベントを作成する</h4>
+    <div style="new-contents">
+      <%= form_with model: @event, url: admin_events_path, method: :post do |f| %>
+        <div class="field">
+          <%= f.label :タイトル ,class: "col-3"  %>
+            <%= f.text_field :title , class: "col-4 form-control"%>
+        </div>
+        <div class="field">
+          <%= f.label :内容 ,class: "col-3" %>
+            <%= f.text_field :content , class: "col-4 form-control" %>
+        </div>
+        <div class="field">
+          <%= f.label :日時 ,class: "col-3"  %>
+            <%= f.datetime_select :start_time %>
+        </div>
+        <div class="field">
+          <div class="actions">
+            <%= f.submit "登録する", class: "btn btn-warning btn-md"%>
+          </div>
+        </div>
+        <% end %>
+    </div>
   </div>
-
-  <div class="field row mb-2">
-    <%= f.label :内容 ,class: "col-3" %>
-    <%= f.text_field :content , class: "col-4 form-control" %>
-  </div>
-  
-  <div class="field row mb-4">
-    <%= f.label :日時 ,class: "col-3" %>
-    <%= f.datetime_select :start_time , class: "col-4 ml-2 form-control" %>
-  </div>
-
-<div class="field row mb-4">
-      <div class="col-3"></div>
-      <div class="actions text-center">
-        <%= f.submit "登録する", class: "btn btn-outline-primary btn-md"%>
-      </div>
-</div>
- 
-<% end %>
-  </div>
-  
-</div>

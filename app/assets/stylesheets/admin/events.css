@@ -22,12 +22,6 @@ h4{
     
 }
 
-h5{
-    display: flex;
-    justify-content: center;
-    font-family: 'Kiwi Maru', serif;
-}
-
 .actions{
     padding-top: 20px;
     margin : 15px;
