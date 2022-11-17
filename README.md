@@ -44,3 +44,10 @@
 - URL→　https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf
 - サイト名  ペットの災害対策[動物の愛護と適切な管理]-環境省
 - URL→　https://www.env.go.jp/nature/dobutsu/aigo/1_law/disaster.html
+- サイト名　いらすとや
+- https://www.irasutoya.com/2020/11/blog-post_5.html
+- https://www.irasutoya.com/2019/12/blog-post_685.html
+- https://www.irasutoya.com/2018/09/blog-post_202.html
+- https://www.irasutoya.com/2016/05/blog-post_967.html
+- https://www.irasutoya.com/2014/02/blog-post_22.html
+- https://www.irasutoya.com/2019/08/blog-post_436.html 

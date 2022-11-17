@@ -1,8 +1,7 @@
 <%= stylesheet_link_tag 'user/posts' %>
 <div class="container">
   <h4>うちの子詳細</h4>
-  
-    <div class="show-contents">
+   <div class="show-contents">
       <div class="left-contents">
         <% if @post.image.attached? %>
           <%= image_tag @post.image, size: "270x160" %>

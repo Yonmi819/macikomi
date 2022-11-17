@@ -1,4 +1,3 @@
-
 <%= stylesheet_link_tag 'user/posts' %>
 <div class="container">
   <div class="top-contents">
@@ -10,7 +9,9 @@
        
           <%= f.search_field :title_cont, class: "form-control form-control-sm" ,placeholder: "キーワードを入力" %>
         
+      
           <%= f.submit "検索", class: "ml-2btn btn-outline-dark btn-sm" %>
+        
         <% end %>
     </div>
    
@@ -20,27 +21,25 @@
      </div>
      
   </div>
-   <div class="index-contents">
-    <div class="item-box">
+  
+    <div class="index-contents">
       <% @posts.each do |post|%>
-        
+        <div class="post-box">
           <%= link_to user_post_path(post) do %>
             <% if post.image.attached? %>
               <%= image_tag post.image, size: "270x160" %><br>
                 <% else %>
                   <%= image_tag 'no_image', size: "270x160" %><br>
                     <% end %>
-                      <p class="overflow-wrap">
-                        <%= post.title %>
-                      </p>
+                      <p><%= post.title %></p>
                      
                       <% end %>
-        
+        </div>
         <% end %>
     </div>
-  </div>
+
   <%#ページネーション%>
-    <div class="row pr-5 mb-2 justify-content-end">
+    <div class="pagenate">
       <%= paginate @posts %>
     </div>
 </div>

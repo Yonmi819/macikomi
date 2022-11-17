@@ -3,6 +3,7 @@
 .field{
     margin-bottom: 10px;
     padding-top: 10px;
+    display: flex;
     color: #8B0000;
     font-family: 'Kiwi Maru', serif;
     
@@ -24,15 +25,22 @@ h5{
 }
 p{
    font-size: 20px;
+   text-align: center;
    font-family: 'Kiwi Maru', serif;
    
 }
 
 .btn-group{
     padding-top: 20px;
+    display: flex;
+    justify-content: center;
     color: #8B0000;
     font-family: 'Kiwi Maru', serif;
-    justify-content: center;
+}
+
+.show-contents{
+    width: 550px;
+    margin: 0 auto;
 }
 
 th,td{
