@@ -1,30 +1,28 @@
 <%= stylesheet_link_tag 'user/homes' %>
-<div class="container">
-  <div class="row">
-  <div class="calendar-content col-md-7 justify-content-left">
-    
-  <%= month_calendar events: @events do |date, events| %>
-    <%= date.day %>
-      <% events.each do |event| %>
-        <div class="title-text">
-          <%= event.title %>
+  <div class="container">
+    <div class="about-contents">
+      <div class="left-contents">
+        <%= month_calendar events: @events do |date, events| %>
+          <%= date.day %>
+            <% events.each do |event| %>
+              <div class="title-text">
+                <%= event.title %>
+              </div>
+              <div class="title-text">
+                <%= event.start_time.strftime("%H:%M") %>
+              </div>
+              <% end %>
+                <% end %>
+      </div>
+      <div class="right-contents">
+        <h4>防災情報</h4>
+        <p>この地区の避難場所はここです！避難時はあせらずに行動しましょう！！</p>
+        <div class="img-box">
+          <%= image_tag 'tizu.jpg' ,size: "270x160" %>
         </div>
-         <div class="title-text">
-          <%= event.start_time.strftime("%H:%M") %>
-        </div>
-        
-        <% end %>
-          <% end %>
-           </div>
-        <div class="-bousai col-md-5 justify-content-right">
-          <h4>防災情報</h4>
-       <p>この地区の避難場所はここです！避難時はあせらずに行動しましょう！！</p>
-       <%#= image_tag '' ,size: "270x160" %>
-          
-          <h5>もしもの備え　あると助かる避難グッズ</h5>
-          <a style="color:#691c0d;" href="https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf">こちらを参考</a>
-          <a style="color:#691c0d;" href="https://www.env.go.jp/nature/dobutsu/aigo/1_law/disaster.html">動物と暮らしている人</a>
-          
-          </div>
-          </div>
-</div>
+        <h5>もしもの備え</h5> <a href="https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf">避難グッズ</a>
+        <a href="https://www.env.go.jp/nature/dobutsu/aigo/1_law/disaster.html">動物と暮らしている人</a>
+        <p>※外部サイト</p>
+      </div>
+    </div>
+  </div>

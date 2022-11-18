@@ -5,19 +5,40 @@
     margin: 0 auto;
 }
 
-.field{
+.field-2{
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    color: #8B0000;
+    font-family: 'Kiwi Maru', serif;
+}
+
+.field-1{
+    margin-bottom: 10px;
+    margin-left: 110px;
     display: flex;
     color: #8B0000;
     font-family: 'Kiwi Maru', serif;
-    
 }
+
+.label{
+    width: 230px;
+}
+
+.form-2{
+    width: 470px;
+    display: flex;
+}
+
+.form-1{
+    width: 230px;
+}
+
 h4{
     padding-top: 35px;
     margin-bottom: 30px;
     text-align: center;
     font-family: 'Kiwi Maru', serif;
-    
 }
 
 h5{
@@ -26,6 +47,14 @@ h5{
     font-family: 'Kiwi Maru', serif;
 }
 
+a{
+    color:#691c0d;
+}
+
 .actions{
-    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    color: #8B0000;
+    font-family: 'Kiwi Maru', serif;
 }

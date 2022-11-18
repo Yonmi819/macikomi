@@ -1,21 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
-.field{
+
+.new-contents{
+    width: 920px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.field-1{
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
     color: #8B0000;
     font-family: 'Kiwi Maru', serif;
-    
 }
+
+.label{
+    width: 230px;
+}
+
+.form-1{
+    width: 230px;
+}
+
 h4{
     padding-top: 35px;
     margin-bottom: 30px;
     text-align: center;
     font-family: 'Kiwi Maru', serif;
-    
 }
 
-h5{
+.actions{
+    padding: 20px 0;
     display: flex;
-    padding-top: 20px;
     justify-content: center;
+    color: #8B0000;
     font-family: 'Kiwi Maru', serif;
 }

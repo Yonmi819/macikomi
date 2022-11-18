@@ -1,22 +1,29 @@
 <%= stylesheet_link_tag 'admin/sessions' %>
-<div class="container col-md-6">
+<div class="container">
   <h4>管理者ログイン</h4>
-  <div style="width:1000px" >
+  <div class="new-contents" >
   <%= form_with model: @admin, url: admin_session_path do |f| %>
-    <div class="field row">
-      <%= f.label :メールアドレス, class: "col-3" %>
-        <%= f.text_field :email, class: "col-3 form-control form-control-sm", placeholder: "sample@gmail.com" %>
-    </div>
-    <div class="field row">
-      <%= f.label :パスワード, class: "col-3" %>
-        <%= f.password_field :password, class: "col-3 form-control form-control-sm" %>
-    </div>
-    <div class="field row">
-      <div class="col-3"></div>
-      <div class="actions text-center">
-        <%= f.submit "はじめる", class: 'btn btn-outline-warning btn-md'%>
+    <div class="field-1">
+      <div class="label">
+      <%= f.label :メールアドレス %>
       </div>
+      <div class="form-1">
+        <%= f.text_field :email, class: "form-control form-control-sm", placeholder: "sample@gmail.com" %>
+        </div>
     </div>
+    <div class="field-1">
+      <div class="label">
+      <%= f.label :パスワード %>
+      </div>
+      <div class="form-1">
+        <%= f.password_field :password, class: "form-control form-control-sm" %>
+        </div>
+    </div>
+    
+      <div class="actions">
+        <%= f.submit "はじめる", class: 'btn btn-warning btn-md'%>
+      </div>
+  
     <% end %>
   </div>
 </div>

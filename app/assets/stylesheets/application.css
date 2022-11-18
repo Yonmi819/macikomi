@@ -12,15 +12,15 @@
  *= require simple_calendar
  *= require_self
  */
- 
- 
- header{
-    width: 100%;
-    height: 70px;
-    z-index: 1000;
-    background-color: #20B2AA;
-    position: fixed;
-    top:0;
+
+
+header{
+ width: 100%;
+ height: 70px;
+ z-index: 1000;
+ position: fixed;
+ background-color: #20B2AA;
+ top:0;
     
 }
 
@@ -42,7 +42,6 @@ body{
    font-size: 15px;
    color :#ffffff;
    text-align: center;
-   font-family: 'Kosugi Maru', sans-serif;
  }
  
 .navbar-nav{

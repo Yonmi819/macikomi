@@ -3,11 +3,13 @@
   <h4>うちの子詳細</h4>
    <div class="show-contents">
       <div class="left-contents">
+        <div class="show-img">
         <% if @post.image.attached? %>
           <%= image_tag @post.image, size: "270x160" %>
             <% else %>
               <%= image_tag 'no_image', size: "270x160" %>
                 <% end %>
+                </div>
                   <table class="table-item">
                     <tr>
                       <th>投稿者</th>
@@ -43,7 +45,7 @@
                       </th>
                       </tr>
                   </table>
-                  <div class="form-group">
+                  <div class="actions">
                     <% if  @post.user == current_user %>
                       <%= link_to "削除する", user_post_path(@post), class: "btn btn-danger btn-sm ", method: :delete, data: {confirm: "本当に削除しますか？"} %>
                         <% end %>

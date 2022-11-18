@@ -1,23 +1,28 @@
 <%= stylesheet_link_tag 'user/sessions' %>
-<div class="container">
-  <h4>ログインする</h4>
-  <div class="new-contents">
-  
-  <%=form_with model: @user, url: user_session_path do |f| %>
-    <div class="field">
-      <%= f.label :メールアドレス, class: "col-3" %>
-        <%= f.text_field :email, class: "col-3 form-control form-control-sm", placeholder: "sample@gmail.com" %>
+  <div class="container">
+    <h4>ログインする</h4>
+    <div class="new-contents">
+      <%=form_with model: @user, url: user_session_path do |f| %>
+        <div class="field-1">
+          <div class="label">
+            <%= f.label :メールアドレス %>
+          </div>
+          <div class="form-1">
+            <%= f.text_field :email, class: "form-control form-control-sm", placeholder: "sample@gmail.com" %>
+          </div>
+        </div>
+        <div class="field-1">
+          <div class="label">
+            <%= f.label :パスワード %>
+          </div>
+          <div class="form-1">
+            <%= f.password_field :password, class: "form-control form-control-sm" %>
+          </div>
+        </div>
+        <div class="actions">
+          <%= f.submit "ログイン", class: 'btn btn-warning btn-md'%>
+        </div>
+        <% end %>
     </div>
-    <div class="field">
-      <%= f.label :パスワード, class: "col-3" %>
-        <%= f.password_field :password, class: "col-3 form-control form-control-sm" %>
-    </div>
-  
-      <div class="actions">
-        <%= f.submit "ログイン", class: 'btn btn-outline-warning btn-md'%>
-      </div>
-  
-    <% end %>
+    <h5>まだ登録済みでない方は<a style="color:#691c0d;" href="/users/sign_up">こちら</a>からご登録をお願いします</h5>
   </div>
-  <h5>まだ登録済みでない方は<a style="color:#691c0d;" href="/users/sign_up">こちら</a>からご登録をお願いします</h5>
-</div>

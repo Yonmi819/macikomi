@@ -3,20 +3,32 @@
     <h4>うちの子登録</h4>
     <div class="new-contents">
       <%= form_with model: @post, url: user_posts_path, method: :post do |f| %>
-        <div class="form-group">
-          <%= f.label :投稿画像 %>
-            <%= f.file_field :image, accept: "image/*" , class: "col-10" %>
+        <div class="field-1">
+          <div class="label">
+            <%= f.label :投稿画像 %>
+          </div>
+          <div class="form-1">
+            <%= f.file_field :image, accept: "image/*" %>
+          </div>
         </div>
-        <div class="form-group">
-          <%= f.label :タイトル %>
-            <%= f.text_field :title , class: "col-7 form-control" %>
+        <div class="field-1">
+          <div class="label">
+            <%= f.label :タイトル %>
+          </div>
+          <div class="form-1">
+            <%= f.text_field :title , class: "form-control" %>
+          </div>
         </div>
-        <div class="form-group">
-          <%= f.label :特徴 %>
+        <div class="field-1">
+          <div class="label">
+            <%= f.label :特徴 %>
+          </div>
+          <div class="form-1">
             <%= f.text_area :body ,class: "form-control" %>
+          </div>
         </div>
         <div class="actions">
-          <%= f.submit '登録する', class: "btn btn-outline-warning" %>
+          <%= f.submit '登録する', class: "btn btn-warning" %>
         </div>
         <% end %>
     </div>

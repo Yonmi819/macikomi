@@ -20,34 +20,46 @@ p{
 }
 
 
-.form-group{
-    margin-bottom: 10px;
-    color: #8B0000;
-    font-family: 'Kiwi Maru', serif;
-    
-}
-
 .actions{
     text-align: left;
     color: #8B0000;
     font-family: 'Kiwi Maru', serif;   
 }
 .new-contents{
-   width: 700px;
-   padding-top: 20px;
+   width: 920px;
+   padding-top: 25px;
    margin: 0 auto;
  }
  
+.field-1{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    color: #8B0000;
+    font-family: 'Kiwi Maru', serif;
+}
+
+.label{
+    width: 150px;
+}
+
+.form-1{
+    width: 300px;
+}
+
 .top-contents{
+   width: 920px;
    display: flex;
-   margin: 0 auto
- }
+
+}
 
 .input-group{
-   width: 280px;
-   padding-top: 20px;
-   display: flex;
-   margin: 0 auto;
+    display: flex;
+    padding-top: 20px;
+ }
+
+.search_field{
+  width: 200px;  
 }
 
 .btn-wrapper{
@@ -69,26 +81,22 @@ p{
  
 }
 
-.pagenate{
+.show-contents{
+  width: 960px;
   display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
-  color: #8B0000;
+  margin: 0 auto;
 }
 
-
-.show-contents{
-    display: flex;
-    margin: 0 auto;
-    }
-
 .left-contents{
-    width: 50;
-    margin: 0 auto;
+  width: 450px;
 }
 
 .right-contents{
-    width: 50%;
+  width: 470px;    
+}
+
+.show-img{
+  text-align: center;
 }
 
 .table-item{
@@ -96,17 +104,32 @@ table-layout: fixed;
 }
 
 th{
-  padding-top: 5px;
+  padding: 3px 0 0 85px;
   font-size: 17px;
   color: #8B0000;
   font-family: 'Kiwi Maru', serif; 
 }
 
-
 td{
   width: 350px;
+  padding-left: 80px;
   word-break: break-word;
   font-size: 15px;
   font-family: 'Kiwi Maru', serif;
   
+}
+
+.pagenate{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  color: #8B0000;
+}
+
+.actions{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    color: #8B0000;
+    font-family: 'Kiwi Maru', serif;
 }

@@ -34,13 +34,9 @@
       </tr>
     </table>
     </div>
-    <div class="btn-group">
-      <div class="form">
-        <%= link_to "編集する", edit_admin_resident_path(@user), class: 'btn btn-warning'%>
-      </div>
-      <div class="form ml-2">
-        <%= link_to "一覧に戻る", admin_residents_path, class: 'btn btn-dark'%>
-      </div>
+    <div class="actions">
+      <%= link_to "編集する", edit_admin_resident_path(@user), class: 'btn btn-warning'%>
+      <%= link_to "一覧に戻る", admin_residents_path, class: 'ml-2 btn btn-primary'%>
     </div>
   　　
 </div>
