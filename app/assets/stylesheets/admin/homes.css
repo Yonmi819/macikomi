@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+
+.top-contents{
+ width: 960px;
+ margin: 0 auto;
+}
+
+.img-box1{
+ text-align: center;
+ padding-top: 30px;
+}
+
+.img-box2{
+ text-align: center;
+}
+
+h5{
+ padding-top: 35px;
+ margin-bottom: 30px;
+ text-align: center;
+ color: #FFD700;
+ font-family: 'Kiwi Maru', serif;
+}

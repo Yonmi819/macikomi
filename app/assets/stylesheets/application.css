@@ -40,8 +40,9 @@ body{
 
 .notice {
    font-size: 15px;
-   color :#ffffff;
    text-align: center;
+   color :#ffffff;
+   font-family: 'Kiwi Maru', serif;
  }
  
 .navbar-nav{
@@ -57,6 +58,7 @@ body{
 
 a{
   color: #FFFF00;
+  font-family: 'Kiwi Maru', serif;
 }
 
 

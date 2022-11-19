@@ -48,18 +48,22 @@ p{
 }
 
 .top-contents{
-   width: 920px;
    display: flex;
-
 }
 
-.input-group{
-    display: flex;
-    padding-top: 20px;
+.search-group{
+ padding-top: 20px;
  }
+ 
+.search_field_wrapper {
+    display: flex;
+    
+    margin-right: 10px;
+}
 
 .search_field{
-  width: 200px;  
+  width: 200px;
+  margin-right: 10px;
 }
 
 .btn-wrapper{

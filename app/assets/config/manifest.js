@@ -6,6 +6,7 @@
 //= link user/sessions.css
 //= link user/posts.css
 //= link user/notifications.css
+//= link admin/homes.css
 //= link admin/sessions.css
 //= link admin/events.css
 //= link admin/residents.css

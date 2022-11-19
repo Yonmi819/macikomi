@@ -1,4 +1,5 @@
 class User::ResidentsController < ApplicationController
+  before_action :ensure_guest_user, only: [:edit]
   def show
     @user = current_user
   end
@@ -37,6 +38,12 @@ class User::ResidentsController < ApplicationController
  def user_params
     params.require(:user).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :fee_status)
  end
-
+ 
+ def ensure_guest_user
+    @user = User.find(params[:id])
+    if @user.last_name == "ゲスト"
+      redirect_to  user_resident_path(current_user) , notice: 'ゲストユーザーはプロフィール編集画面へ遷移できません。'
+    end
+ end  
 
 end

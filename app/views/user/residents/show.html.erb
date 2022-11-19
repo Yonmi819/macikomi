@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'user/residents' %>
 <div class="container">
-  　<div class="show-contents">
+  <div class="show-contents">
     <h4>ユーザー詳細</h4>
     <table class="table table-striped">
       <tr>
@@ -23,11 +23,11 @@
       </tr>
       
     </table>
+    <% if @user.last_name != "ゲスト" %>
     
       <div class="actions">
         <%= link_to "編集する", edit_user_resident_path(@user), class: 'btn btn-warning'%>
       </div>
-      
+    <% end %> 
 </div>
-  　　
 </div>
