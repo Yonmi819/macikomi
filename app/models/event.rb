@@ -2,6 +2,10 @@ class Event < ApplicationRecord
     belongs_to :admin
     has_many :notifications, dependent: :destroy
     
+    validates :title, presence: true
+    validates :content, presence: true
+    validates :start_time, presence: true
+    
    
     
      #管理者がイベントをつくった時の通知を作成するメソッド↓

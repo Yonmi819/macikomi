@@ -9,7 +9,9 @@ class Admin::EventsController < ApplicationController
     @event.admin_id = current_admin.id
     @event.save
     @event.create_notification_event!(@event.id)
+    flash[:notice] = 'イベントを作成しました!'
     redirect_to new_admin_event_path
+   
   end
 
   private

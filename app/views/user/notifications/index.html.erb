@@ -2,10 +2,11 @@
 <div class="container">
 <h4>通知一覧</h4>
 <%= link_to  user_notifications_destroy_all_path, method: :delete do %>
-        <i class="fas fa-trash" style="color: black;"></i>
-        <h7 style="color: black;">全削除</h7>
-    <% end %>
-<div class="common-contents">
+    <i class="fas fa-trash" style="color: black;"></i>
+    <h7 style="color: black;">全削除</h7>
+<% end %>
+
+ <div class="common-contents">
   <div class="posts">
     <% if @notifications.exists? %>
     <ul class="allnotifications-list">
@@ -16,7 +17,7 @@
     <h5 class="allnotifications-no">通知はありません</h5>
     <% end %>
   </div>
-</div>
+ </div>
 </div>
 
 
