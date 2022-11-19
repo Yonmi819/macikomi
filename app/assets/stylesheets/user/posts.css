@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 
 h4{ 
-    padding-top: 20px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #FFD700;
-    font-family: 'Kiwi Maru', serif;
+ padding-top: 20px;
+ margin-bottom: 20px;
+ text-align: center;
+ color: #FFD700;
+ font-family: 'Kiwi Maru', serif;
 }
 
 h5{
-    text-align: center; 
-    font-family: 'Kiwi Maru', serif;
+ text-align: center; 
+ font-family: 'Kiwi Maru', serif;
 }
 
 p{ 
-    font-size: 20px;
-    color: #FFD700;
-    font-family: 'Kiwi Maru', serif;
+ font-size: 20px;
+ color: #FFD700;
+ font-family: 'Kiwi Maru', serif;
 }
 
 
@@ -49,26 +49,22 @@ p{
 
 .top-contents{
    display: flex;
+   justify-content: center;
 }
 
-.search-group{
- padding-top: 20px;
- }
- 
+
 .search_field_wrapper {
     display: flex;
-    
     margin-right: 10px;
 }
 
 .search_field{
   width: 200px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .btn-wrapper{
    width: 150px;
-   padding-top: 20px;
 }
 
 .index-contents{
@@ -116,7 +112,7 @@ th{
 
 td{
   width: 350px;
-  padding-left: 80px;
+  padding-left: 85px;
   word-break: break-word;
   font-size: 15px;
   font-family: 'Kiwi Maru', serif;

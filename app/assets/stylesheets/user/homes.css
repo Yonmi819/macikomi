@@ -19,6 +19,19 @@ p{
  font-family: 'Kiwi Maru', serif;   
 }
 
+.top-contents{
+ width: 960px;
+ margin: 0 auto;
+}
+
+.img-box1{
+ text-align: center;
+ padding-top: 30px;
+}
+
+.img-box2{
+ text-align: center;
+}
 .about-contents{
  display: flex;
 }
@@ -37,6 +50,7 @@ thead{
 }
 
 .title-text{
+ font-size: 12px;
  color: #000080;
  font-family: 'Kiwi Maru', serif;
 }
