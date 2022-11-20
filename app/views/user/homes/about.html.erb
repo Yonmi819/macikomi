@@ -1,31 +1,31 @@
 <%= stylesheet_link_tag 'user/homes' %>
-  <div class="container">
-    <div class="about-contents">
-      <div class="left-contents">
-        <%= month_calendar events: @events do |date, events| %>
-          <%= date.day %>
-            <% events.each do |event| %>
-              <div class="title-text">
-                <%= event.title %>
-              </div>
-              <div class="title-text">
-                <%= event.content %>
-              </div>
-              <div class="title-text">
-                <%= event.start_time.strftime("%H:%M") %>
-              </div>
-              <% end %>
-                <% end %>
+  
+<div class="container">
+    
+  <div class="about-contents">
+    <div class="left-contents">
+      <%= month_calendar events: @events do |date, events| %>
+       <%= date.day %>
+       <% events.each do |event| %>
+         <div class="title-text">
+          <%= event.title %>
+          <%= event.content %>
+          <%= event.start_time.strftime("%H:%M") %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+      
+    <div class="right-contents">
+      <h4>防災情報</h4>
+      <p>この地区の避難場所はここです！避難時はあせらずに行動しましょう！！</p>
+      <div class="img-box">
+        <%= image_tag 'tizu.jpg' ,size: "270x160" %>
       </div>
-      <div class="right-contents">
-        <h4>防災情報</h4>
-        <p>この地区の避難場所はここです！避難時はあせらずに行動しましょう！！</p>
-        <div class="img-box">
-          <%= image_tag 'tizu.jpg' ,size: "270x160" %>
-        </div>
-        <h5>もしもの備え</h5> <a href="https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf">避難グッズ ・</a>
+      <h5>もしもの備え</h5> <a href="https://panasonic.jp/battery/contents/safety/goodslist/checklist2022.pdf">避難グッズ ・</a>
         <a href="https://www.env.go.jp/nature/dobutsu/aigo/1_law/disaster.html"> 動物と暮らしている人向け</a>
         <p>※外部サイトです</p>
-      </div>
     </div>
   </div>
+  
+</div>

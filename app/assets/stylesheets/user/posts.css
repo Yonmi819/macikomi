@@ -116,7 +116,11 @@ td{
   word-break: break-word;
   font-size: 15px;
   font-family: 'Kiwi Maru', serif;
-  
+}
+
+.form-group{
+ width: 380px;
+ margin: 0 auto;
 }
 
 .pagenate{

@@ -7,11 +7,14 @@ class Admin::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.admin_id = current_admin.id
-    @event.save
+    if@event.save
     @event.create_notification_event!(@event.id)
     flash[:notice] = 'イベントを作成しました!'
     redirect_to new_admin_event_path
-   
+    else
+    flash[:notice] = '必要事項が入力されていないです'
+    render :new
+    end
   end
 
   private

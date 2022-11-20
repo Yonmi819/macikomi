@@ -1,35 +1,37 @@
 <%= stylesheet_link_tag 'user/posts' %>
-  <div class="container">
-    <h4>うちの子登録</h4>
-    <div class="new-contents">
-      <%= form_with model: @post, url: user_posts_path, method: :post do |f| %>
-        <div class="field-1">
-          <div class="label">
-            <%= f.label :投稿画像 %>
-          </div>
-          <div class="form-1">
-            <%= f.file_field :image, accept: "image/*" %>
-          </div>
-        </div>
-        <div class="field-1">
-          <div class="label">
-            <%= f.label :タイトル %>
-          </div>
-          <div class="form-1">
-            <%= f.text_field :title , class: "form-control" %>
-          </div>
-        </div>
-        <div class="field-1">
-          <div class="label">
-            <%= f.label :特徴 %>
-          </div>
-          <div class="form-1">
-            <%= f.text_area :body ,class: "form-control" %>
-          </div>
-        </div>
-        <div class="actions">
-          <%= f.submit '登録する', class: "btn btn-warning" %>
-        </div>
-        <% end %>
+  
+<div class="container">
+ <h4>うちの子登録</h4>
+  <div class="new-contents">
+   <%= form_with model: @post, url: user_posts_path, method: :post do |f| %>
+    <div class="field-1">
+      <div class="label">
+        <%= f.label :投稿画像 %>
+      </div>
+      <div class="form-1">
+        <%= f.file_field :image, accept: "image/*" %>
+      </div>
     </div>
+    <div class="field-1">
+      <div class="label">
+        <%= f.label :タイトル %>
+      </div>
+      <div class="form-1">
+        <%= f.text_field :title , class: "form-control" %>
+      </div>
+    </div>
+    <div class="field-1">
+      <div class="label">
+        <%= f.label :特徴 %>
+      </div>
+      <div class="form-1">
+        <%= f.text_area :body ,class: "form-control" %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit '登録する', class: "btn btn-warning" %>
+    </div>
+   <% end %>
   </div>
+  
+</div>
