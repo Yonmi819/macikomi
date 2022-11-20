@@ -12,4 +12,3 @@ if !defined?(Spring) && [nil, "development", "test"].include?(ENV["RAILS_ENV"])
     # Ignore when Spring is not installed.
   end
 end
-a
