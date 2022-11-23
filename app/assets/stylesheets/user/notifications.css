@@ -20,3 +20,8 @@ p{
  color: #8B0000;
  font-family: 'Kiwi Maru', serif;
 }
+
+.notifications-contents{
+ width: 920px;
+ margin: 0 auto;
+}

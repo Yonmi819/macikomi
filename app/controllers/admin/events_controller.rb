@@ -12,7 +12,7 @@ class Admin::EventsController < ApplicationController
   flash[:notice] = 'イベントを作成しました!'
   redirect_to new_admin_event_path
   else
-  flash[:notice] = '必要事項が入力されていないです'
+  flash.now[:notice] = '必要事項が入力されていないです'
   render :new
   end
  end
