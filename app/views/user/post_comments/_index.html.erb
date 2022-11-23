@@ -1,21 +1,16 @@
-<table>
-  <tbody>
-    <% post.post_comments.each do |post_comment| %>
-      <tr>
-        <td>
-          <strong><%= post_comment.user.last_name %>さん</strong>
-          </td>
-          </tr>
-        <tr>
-        <td>
-          <%= post_comment.comment %>
-        </td>
-        <td>
-          <% if post_comment.user.id == current_user.id %>
-            <%= link_to "削除",user_post_post_comment_path(post, post_comment), method: :delete, remote: true, class: "btn btn-danger" %>
-              <% end %>
-        </td>
-      </tr>
-      <% end %>
-  </tbody>
-</table>
+
+<% post.post_comments.each do |post_comment| %>
+  <div class="card">
+   <div class="card-body">
+     <p><%= post_comment.user.last_name %>さん:<br/>
+      <%= post_comment.comment %></p>
+       
+    </div>
+  </div>
+  <% if post_comment.user.id == current_user.id %>
+         <%= link_to "削除",user_post_post_comment_path(post, post_comment), method: :delete, remote: true, class: "mb-3 btn btn-danger btn-sm" %>
+       <% end %>
+<% end %>
+
+
+  

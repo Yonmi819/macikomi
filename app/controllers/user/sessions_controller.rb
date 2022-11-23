@@ -32,9 +32,7 @@ class User::SessionsController < Devise::SessionsController
    
  protected
   
-  
-
- def reject_user
+ def reject_user # 退会しているかを判断するメソッド
   @user = User.find_by(email: params[:user][:email])
    if @user
       if @user.valid_password?(params[:user][:password]) && (@user.active_for_authentication? == false)

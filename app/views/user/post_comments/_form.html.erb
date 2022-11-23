@@ -1,18 +1,7 @@
-<table>
-  <tbody>
-    <%= form_with model:[post, post_comment], url: user_post_post_comments_path(post), local: false do |f| %>
-     <tr>
-      <td>
-       <div class="form-group">
-       <%= f.text_area :comment, placeholder: "コメントをここに", class: "form-control comment-textarea" %>
-       </div>
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <%= f.submit "送信" , class: " mb-3 btn btn-primary" %>
-      </td>
-     </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= form_with model:[post, post_comment], url: user_post_post_comments_path(post), local: false do |f| %>
+  <div class="form-group">
+   <%= f.text_area :comment, placeholder: "コメントをここに", class: "form-control comment-textarea" %>
+     <%= f.submit "送信" , class: " m-1 btn btn-primary btn-sm" %>
+  </div>
+<% end %>
+ 
