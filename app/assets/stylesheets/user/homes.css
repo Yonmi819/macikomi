@@ -1,64 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
-
 h4{
- padding-top: 25px;
- margin-bottom: 30px;
- text-align: center;
- color: #FFD700;
- font-family: 'Kiwi Maru', serif;
+  padding-top: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #FFD700;
+  font-family: 'Kiwi Maru', serif;
 }
 
 h5{
- padding: 20px;
- text-align : center;
- color: #FFD700;
- font-family: 'Kiwi Maru', serif;
+  padding: 20px;
+  text-align : center;
+  color: #FFD700;
+  font-family: 'Kiwi Maru', serif;
 }
 
 p{
- font-family: 'Kiwi Maru', serif;   
+  font-size: 13px;
+  color: #000080;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .top-contents{
- width: 960px;
- margin: 0 auto;
+  width: 960px;
+  margin: 0 auto;
 }
 
 .img-box1{
- text-align: center;
- padding-top: 30px;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .img-box2{
- text-align: center;
+  text-align: center;
 }
+
 .about-contents{
- display: flex;
+  display: flex;
 }
 
 .left-contents{
- width: 630px;
- justify-content: center;
+  width: 630px;
+  justify-content: center;
 }
 
 .simple-calendar table tbody{ 
- background-color: white; 
+  background-color: white; 
 }
 
 thead{
- background-color: blueviolet;
-}
-
-.title-text{
- font-size: 11px;
- color: #000080;
- font-family: 'Kiwi Maru', serif;
+  background-color: blueviolet;
 }
 
 .right-contents{
- width: 370px;
- margin-left: 20px;
- text-align: center;
+  width: 370px;
+  margin-left: 20px;
+  text-align: center;
 }
 
 

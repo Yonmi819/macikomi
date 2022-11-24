@@ -1,86 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
-
 h4{ 
- padding-top: 10px;
- margin-bottom: 20px;
- text-align: center;
- color: #FFD700;
- font-family: 'Kiwi Maru', serif;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FFD700;
+  font-family: 'Kiwi Maru', serif;
 }
 
 h5{
- text-align: center; 
- font-family: 'Kiwi Maru', serif;
+  text-align: center; 
+  font-family: 'Kiwi Maru', serif;
 }
 
 p{
- font-size: 13px;
- font-family: 'Kiwi Maru', serif;
+  font-size: 13px;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .new-contents{
- width: 920px;
- padding-top: 25px;
- margin: 0 auto;
- }
+  width: 920px;
+  padding-top: 25px;
+  margin: 0 auto;
+}
  
 .field-1{
- margin-bottom: 10px;
- display: flex;
- justify-content: center;
- color: #8B0000;
- font-family: 'Kiwi Maru', serif;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  color: #8B0000;
+  font-family: 'Kiwi Maru', serif;
 }
 
-.label{
- width: 150px;
+.label,.btn-wrapper{
+  width: 150px;
 }
 
 .form-1{
- width: 300px;
+  width: 300px;
 }
 
 .top-contents{
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .search_field_wrapper {
- display: flex;
- margin-right: 10px;
+  display: flex;
+  margin-right: 10px;
 }
 
 .search_field{
- width: 200px;
- margin-right: 5px;
-}
-
-.btn-wrapper{
- width: 150px;
+  width: 200px;
+  margin-right: 5px;
 }
 
 .index-contents{
- width: 700px;
- margin: 0 auto;
- display: flex;
- flex-wrap: wrap;
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .post-box{
- width: 350px;
- margin-bottom: 15px;
- text-align: center;
+  width: 350px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .show-contents{
- width: 900px;
- display: flex;
- justify-content: center;
- margin: 0 auto;
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .left-contents{
- width: 380px;
+  width: 380px;
 }
 
 .show-img{
@@ -88,21 +82,21 @@ p{
 }
 
 .table-item{
-table-layout: fixed;
+  table-layout: fixed;
 }
 
 th{
- padding-left: 58px;
- font-size: 17px;
- color: #8B0000;
- font-family: 'Kiwi Maru', serif; 
+  padding-left: 58px;
+  font-size: 17px;
+  color: #8B0000;
+  font-family: 'Kiwi Maru', serif; 
 }
 
 td{
- padding-left: 58px;
- word-break: break-word;
- font-size: 15px;
- font-family: 'Kiwi Maru', serif;
+  padding-left: 58px;
+  word-break: break-word;
+  font-size: 15px;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .right-contents{
@@ -110,30 +104,15 @@ td{
 }
 
 .comments-form{
- padding-left: 30px;
+  padding-left: 30px;
 }
 
 .form-group{
- width: 300px;
- font-family: 'Kiwi Maru', serif; 
+  width: 300px;
+  font-family: 'Kiwi Maru', serif; 
 }
 
 .card{
- width: 300px;
- margin-bottom: 2px;
-}
-
-.pagenate{
- display: flex;
- justify-content: flex-end;
- padding-right: 20px;
- color: #8B0000;
-}
-
-.actions{
- padding: 20px 0;
- display: flex;
- justify-content: center;
- color: #8B0000;
- font-family: 'Kiwi Maru', serif;
+  width: 300px;
+  margin-bottom: 2px;
 }
