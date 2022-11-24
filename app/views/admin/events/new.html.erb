@@ -1,35 +1,36 @@
 <%= stylesheet_link_tag 'admin/events' %>
-  <div class="container">
-    <h4>イベントを作成する</h4>
-    <div style="new-contents">
-      <%= form_with model: @event, url: admin_events_path, method: :post do |f| %>
-        <div class="field-1">
-          <div class="label">
-            <%= f.label :タイトル %>
-          </div>
-          <div class="form-1">
-            <%= f.text_field :title , class: "form-control"%>
-          </div>
-        </div>
-        <div class="field-1">
-          <div class="label">
-            <%= f.label :内容 %>
-          </div>
-          <div class="form-1">
-            <%= f.text_field :content , class: "form-control" %>
-          </div>
-        </div>
-        <div class="field-1">
-          <div class="label">
-            <%= f.label :日時 %>
-          </div>
-          <div class="form-1">
-            <%= f.datetime_select :start_time %>
-          </div>
-        </div>
-        <div class="actions">
-          <%= f.submit "登録する", class: "btn btn-warning btn-md"%>
-        </div>
-        <% end %>
-    </div>
+
+<div class="container">
+ <h4>イベントを作成する</h4>
+  <div style="new-contents">
+   <%= form_with model: @event, url: admin_events_path, method: :post do |f| %>
+     <div class="field-1">
+      <div class="label">
+        <%= f.label :タイトル %>
+      </div>
+      <div class="form-1">
+        <%= f.text_field :title , class: "form-control"%>
+      </div>
+     </div>
+     <div class="field-1">
+      <div class="label">
+        <%= f.label :内容 %>
+      </div>
+      <div class="form-1">
+        <%= f.text_field :content , class: "form-control" %>
+      </div>
+     </div>
+     <div class="field-1">
+      <div class="label">
+        <%= f.label :日時 %>
+      </div>
+      <div class="form-1">
+        <%= f.datetime_select :start_time %>
+      </div>
+     </div>
+     <div class="actions">
+        <%= f.submit "登録する", class: "btn btn-warning btn-md"%>
+     </div>
+   <% end %>
   </div>
+</div>

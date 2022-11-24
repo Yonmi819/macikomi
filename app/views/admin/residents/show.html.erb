@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag 'admin/residents' %>
+
 <div class="container">
-  
-    <h4>ユーザー詳細</h4>
-    <div class="show-contents">
+ <h4>ユーザー詳細</h4>
+  <div class="show-contents">
     <table class="table table-striped">
       <tr>
         <th>名前</th>
@@ -33,10 +33,9 @@
         </td>
       </tr>
     </table>
-    </div>
+  </div>
     <div class="actions">
       <%= link_to "編集する", edit_admin_resident_path(@user), class: 'btn btn-warning'%>
       <%= link_to "一覧に戻る", admin_residents_path, class: 'ml-2 btn btn-primary'%>
     </div>
-  　　
 </div>
