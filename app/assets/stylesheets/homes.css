@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Hachi+Maru+Pop&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+h4{
+  padding-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #FFD700;
+  font-size: 40px;
+  font-family: 'Hachi Maru Pop', cursive;
+}
 
 .logo-content,.field{
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-h4{
-   padding-top: 45px;
-   margin-bottom: 20px;
-   text-align: center;
-   color: #FFD700;
-   font-size: 40px;
-   font-family: 'Hachi Maru Pop', cursive;
-   
-}
