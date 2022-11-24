@@ -1,50 +1,65 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 
 header{
- width: 100%;
- height: 55px;
- z-index: 1000;
- position: fixed;
- background-color: #20B2AA;
- top:0;
+  width: 100%;
+  height: 55px;
+  z-index: 1000;
+  position: fixed;
+  background-color: #20B2AA;
+  top:0;
 }
 
 body{
- padding-top :10px;
- background-color :#7B68EE;
+  padding-top :10px;
+  background-color :#7B68EE;
 }
 
 .container{
- width: 1000px;
- margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .notice {
- font-size: 15px;
- text-align: center;
- color :#ffffff;
- font-family: 'Kiwi Maru', serif;
- }
+  font-size: 15px;
+  text-align: center;
+  color :#ffffff;
+  font-family: 'Kiwi Maru', serif;
+}
  
 .navbar-nav{
- 
- margin-left : auto;
- line-height: 70px;
-   
+  margin-left : auto;
+  line-height: 70px;
 }
+
 .nav-list{
- line-height: 55px;
- margin-left :7px;
- font-size: 11px;
-  
+  line-height: 55px;
+  margin-left :7px;
+  font-size: 11px;
 }
 
 a{
- color: #FFFF00;
- font-family: 'Kiwi Maru', serif;
+  color: #FFFF00;
+  font-family: 'Kiwi Maru', serif;
+}
+
+.actions{
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  color: #8B0000;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .field_with_errors {
- display: contents;
+  display: contents;
+}
+
+.pagenate{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  color: #8B0000;
 }
