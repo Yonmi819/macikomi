@@ -1,103 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
-
 h4{ 
- padding-top: 20px;
- margin-bottom: 30px;
- text-align: center;
- color: #FFD700;
- font-family: 'Kiwi Maru', serif;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #FFD700;
+  font-family: 'Kiwi Maru', serif;
 }
 
 p{
- color: #FFFF00;
+  color: #FFFF00;
 }
 
 .index-contents{
- width: 800px;
- margin: 0 auto;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .show-contents{
- width: 550px;
- margin: 0 auto;
+  width: 550px;
+  margin: 0 auto;
 }
 
 .table{
- background-color: #000080;
+  background-color: #000080;
 }
 
 th{
- padding-top: 5px;
- font-size: 17px;
- text-align: center;
- background-color: #20B2AA;
- font-family: 'Kiwi Maru', serif; 
+  padding-top: 5px;
+  font-size: 17px;
+  text-align: center;
+  background-color: #20B2AA;
+  font-family: 'Kiwi Maru', serif; 
 }
 
 td{
- font-size: 15px;
- text-align: center;
- color: #ffffff;
- font-family: 'Kiwi Maru', serif;
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Kiwi Maru', serif;
   
 }
 
 .edit-contents{
- width: 920px;
- padding-top: 20px;
- margin: 0 auto;
+  width: 920px;
+  padding-top: 20px;
+  margin: 0 auto;
 }
 
 .field-2{
- margin-bottom: 10px;
- display: flex;
- justify-content: center;
- color: #8B0000;
- font-family: 'Kiwi Maru', serif;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  color: #8B0000;
+  font-family: 'Kiwi Maru', serif;
 }
 
 .field-1{
- margin-bottom: 10px;
- margin-left: 110px;
- display: flex;
- color: #8B0000;
- font-family: 'Kiwi Maru', serif;
+  margin-bottom: 10px;
+  margin-left: 110px;
+  display: flex;
+  color: #8B0000;
+  font-family: 'Kiwi Maru', serif;
 }
 
-.label{
- width: 230px;
+.label,.form-1{
+  width: 230px;
 }
 
 .form-2{
- width: 470px;
- display: flex;
-}
-
-.form-1{
- width: 230px;
+  width: 470px;
+  display: flex;
 }
 
 .mail-form{
- width: 500px;
- margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .form-group{
- color: #8B0000;
- font-family: 'Kiwi Maru', serif;
+  color: #8B0000;
+  font-family: 'Kiwi Maru', serif;
 }
 
-.pagenate{
- display: flex;
- justify-content: flex-end;
- padding-right: 20px;
- color: #8B0000;
-}
-
-.actions{
- padding: 20px 0;
- display: flex;
- justify-content: center;
- color: #8B0000;
- font-family: 'Kiwi Maru', serif;
-}
