@@ -8,7 +8,7 @@ class CreateNotifications < ActiveRecord::Migration[6.1]
       t.integer :event_id 
       t.string  :action, default: "", null: false
       t.boolean :checked, default: false, null: false
-
+      
       t.timestamps
     end
 
@@ -17,10 +17,6 @@ class CreateNotifications < ActiveRecord::Migration[6.1]
     add_index :notifications, :post_id
     add_index :notifications, :post_comment_id
     add_index :notifications, :event_id
-
-
-
-end
-
-
+ 
+  end
 end

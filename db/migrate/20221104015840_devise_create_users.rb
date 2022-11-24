@@ -38,6 +38,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :first_name_kana,  null: false
       t.boolean :fee_status,      null: false, default: false
       t.boolean :delete_flag,     null: false, default: false
+      
       t.timestamps null: false
     end
 
