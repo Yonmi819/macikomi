@@ -1,45 +1,47 @@
 <%= stylesheet_link_tag 'admin/residents' %>
-  <div class="container">
-    <h4>ユーザー情報</h4>
-    <div class="index-contents">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>名前</th>
-            <th>アドレス</th>
-            <th>会費ステータス</th>
-            <th>送信</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <td>
-                <%= link_to  admin_resident_path(user) do%>
-                  <%= user.last_name%>
-                    <%= user.first_name%>
-                      <% end %>
-              </td>
-              <td>
-                <%= user.email %>
-              </td>
-              <td>
-                <% if user.fee_status == false %>
-                  <p>会費未徴収</p>
-                  <% else %>
-                    <p>会費徴収済み</p>
-                    <% end %>
-              </td>
-              <td>
-                <%= link_to admin_residents_form_path(id: user) ,class: 'nav-link text-light' do %><i class="far fa-envelope"></i>メールを送る
-                  <% end %>
-              </td>
-            </tr>
-            <% end %>
-        </tbody>
-      </table>
-    </div>
+  
+<div class="container">
+ <h4>ユーザー情報</h4>
+  <div class="index-contents">
+   <table class="table table-striped">
+    <thead>
+     <tr>
+      <th>名前</th>
+      <th>アドレス</th>
+      <th>会費ステータス</th>
+      <th>送信</th>
+     </tr>
+    </thead>
+        
+    <tbody>
+     <% @users.each do |user| %>
+      <tr>
+       <td>
+        <%= link_to  admin_resident_path(user) do%>
+         <%= user.last_name%>
+          <%= user.first_name%>
+        <% end %>
+       </td>
+       <td>
+        <%= user.email %>
+       </td>
+       <td>
+        <% if user.fee_status == false %>
+          <p>会費未徴収</p>
+        <% else %>
+          <p>会費徴収済み</p>
+        <% end %>
+       </td>
+       <td>
+         <%= link_to admin_residents_form_path(id: user) ,class: 'nav-link text-light' do %><i class="far fa-envelope"></i>メールを送る
+         <% end %>
+       </td>
+      </tr>
+     <% end %>
+    </tbody>
+   </table>
+  </div>
     <div class="pagenate">
       <%= paginate @users %>
     </div>
-  </div>
+</div>

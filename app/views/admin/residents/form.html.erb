@@ -1,15 +1,16 @@
 <%= stylesheet_link_tag 'admin/residents' %>
-  <div class="container">
-    <h4>メール送信フォーム</h4>
-    <div class="mail-form">
-      <%= form_with url: admin_residents_send_mail_path(id: @user), method: :post do |f| %>
-        <div class="form-group">
-          <%= f.label :本文 %>
-            <%= f.text_area :message, class: "form-control comment-textarea" %>
-        </div>
-        <div class="actions">
-          <%= f.submit '送信', class: "btn btn-info" %>
-        </div>
-        <% end %>
-    </div>
+  
+<div class="container">
+ <h4>メール送信フォーム</h4>
+  <div class="mail-form">
+    <%= form_with url: admin_residents_send_mail_path(id: @user), method: :post do |f| %>
+      <div class="form-group">
+        <%= f.label :本文 %>
+        <%= f.text_area :message, class: "form-control comment-textarea" %>
+      </div>
+      <div class="actions">
+        <%= f.submit '送信', class: "btn btn-info" %>
+      </div>
+    <% end %>
   </div>
+</div>

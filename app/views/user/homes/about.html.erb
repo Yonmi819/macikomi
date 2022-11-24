@@ -1,16 +1,15 @@
 <%= stylesheet_link_tag 'user/homes' %>
   
 <div class="container">
-    
   <div class="about-contents">
     <div class="left-contents">
       <%= month_calendar events: @events do |date, events| %>
        <%= date.day %>
        <% events.each do |event| %>
          <div class="title-text">
-          <%= event.title %>
-          <%= event.content %>
-          <%= event.start_time.strftime("%H:%M") %>
+          <p><%= event.title %><br/>
+          <%= event.content %><br/>
+          <%= event.start_time.strftime("%H:%M") %></p>
           </div>
         <% end %>
       <% end %>
@@ -27,5 +26,4 @@
         <p>※外部サイトです</p>
     </div>
   </div>
-  
 </div>

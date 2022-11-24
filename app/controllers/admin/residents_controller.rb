@@ -16,6 +16,7 @@ class Admin::ResidentsController < ApplicationController
   @user = User.find(params[:id])
   @message = params[:message]
   AdminMailer.send_mail(@user, @message).deliver_now
+  flash[:notice] = "メールを送信いたしました"
   redirect_to admin_residents_path
  end
   
@@ -34,10 +35,12 @@ class Admin::ResidentsController < ApplicationController
   end
  end
   
- private
+ 
   
- def user_params
-  params.require(:user).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :fee_status)
- end
+  private
+  
+  def user_params
+    params.require(:user).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :fee_status)
+  end
 
 end
