@@ -46,6 +46,12 @@ p{
   background-color: white; 
 }
 
+.title-text{
+  font-size: 11px;
+  color: #000080;
+  font-family: 'Kiwi Maru', serif;
+}
+
 thead{
   background-color: blueviolet;
 }
@@ -55,8 +61,3 @@ thead{
   margin-left: 20px;
   text-align: center;
 }
-
-
-
-
-

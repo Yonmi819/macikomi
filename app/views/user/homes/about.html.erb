@@ -7,11 +7,15 @@
        <%= date.day %>
        <% events.each do |event| %>
          <div class="title-text">
-          <p><%= event.title %><br/>
-          <%= event.content %><br/>
-          <%= event.start_time.strftime("%H:%M") %></p>
-          </div>
-        <% end %>
+           <%= event.title %>
+         </div>
+         <div class="title-text">
+           <%= event.content %>
+         </div>
+         <div class="title-text">
+           <%= event.start_time.strftime("%H:%M") %>
+         </div>
+       <% end %>
       <% end %>
     </div>
       

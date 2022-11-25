@@ -2,7 +2,6 @@
   
 <div class="container">
   <h4>コミュニティ登録ページ</h4>
-    
    <div class="new-contents">
     <%= form_with model: @user, url: user_registration_path do |f| %>
       <%= render "user/shared/error_messages", resource: resource %>
