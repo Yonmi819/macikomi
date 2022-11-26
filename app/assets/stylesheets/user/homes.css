@@ -10,7 +10,7 @@ h5{
   padding: 20px;
   text-align : center;
   color: #FFD700;
-  font-family: 'Kiwi Maru', serif;
+  font-family: 'Hachi Maru Pop', cursive;
 }
 
 p{
@@ -44,6 +44,16 @@ p{
 
 .simple-calendar table tbody{ 
   background-color: white; 
+}
+
+.wday-0 {
+  background: #ffeaea;
+  color: #ff505c;
+}
+  
+.wday-6 {
+  background: #d4ebff;
+  color: #5984dc;
 }
 
 .title-text{

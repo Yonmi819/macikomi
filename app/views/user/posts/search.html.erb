@@ -7,13 +7,9 @@
     <% @results.each do |post| %>
      <div class="post-box">
       <%= link_to user_post_path(post) do %>
-       <% if post.image.attached? %>
-        <%= image_tag post.image, size: "270x160" %><br>
-        <% else %>
-        <%= image_tag 'no_image', size: "270x160" %><br>
-        <% end %>
+       <%= image_tag post.image, size: "270x160" %><br>
         <h5><%= post.title %></h5>
-       <% end %>
+      <% end %>
      </div>
     <% end %>
     <% else %>

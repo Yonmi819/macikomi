@@ -16,7 +16,7 @@ class Admin::EventsController < ApplicationController
    render :new
    end
   end
-
+  
   private
 
   def event_params
