@@ -6,7 +6,7 @@ class User::PostCommentsController < ApplicationController
    @comment.post_id = @post.id
    if @comment.save
    #通知機能をつくるメソッドを呼び出す
-   @post.create_notification_comment!(current_user, @comment.id)
+   @post.create_notification_comment!(current_user, @comment.id, @post.user.id)
    end
   end
 
