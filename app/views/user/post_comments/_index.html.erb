@@ -4,8 +4,7 @@
    <div class="card-body">
      <p><%= post_comment.user.last_name %>さん:<br/>
       <%= post_comment.comment %></p>
-       
-    </div>
+   </div>
   </div>
   <% if post_comment.user.id == current_user.id %>
          <%= link_to "削除",user_post_post_comment_path(post, post_comment), method: :delete, remote: true, class: "mb-3 btn btn-danger btn-sm" %>

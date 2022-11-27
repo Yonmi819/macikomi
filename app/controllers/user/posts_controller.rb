@@ -18,7 +18,7 @@ class User::PostsController < ApplicationController
    end
   end
 
-  def index #新着順
+  def index 
    @posts = Post.order(created_at: :desc).page(params[:page]).per(4)
   end
      
