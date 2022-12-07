@@ -1,4 +1,4 @@
-class Admin::ResidentsController < ApplicationController
+
   
   def index
    @users =  User.page(params[:page]).per(6)
@@ -25,13 +25,13 @@ class Admin::ResidentsController < ApplicationController
   end
   
   def update
-   @user = User.find(params[:id])
+    @user = User.find(params[:id])
    if @user.update(user_params)
-   flash[:notice] = "ユーザー情報を変更しました"
-   redirect_to admin_resident_path(@user)
+    flash[:notice] = "ユーザー情報を変更しました"
+    redirect_to admin_resident_path(@user)
    else
-   flash.now[:notice] = "必要事項を入力してください"
-   render :edit
+    flash.now[:notice] = "必要事項を入力してください"
+    render :edit
    end
   end
   

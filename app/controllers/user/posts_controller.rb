@@ -6,15 +6,15 @@ class User::PostsController < ApplicationController
   end
   
   def create
-   @post = Post.new(post_params)
-   @post.user_id = current_user.id
+    @post = Post.new(post_params)
+    @post.user_id = current_user.id
    if @post.save
-   @post.create_notification_post!(current_user)
-   flash[:notice] = 'うちの子を投稿しました。'
-   redirect_to user_posts_path
+    @post.create_notification_post!(current_user)
+    flash[:notice] = 'うちの子を投稿しました。'
+    redirect_to user_posts_path
    else
-   flash.now[:notice] = '必要事項を入力してください。'
-   render :new
+    flash.now[:notice] = '必要事項を入力してください。'
+    render :new
    end
   end
 

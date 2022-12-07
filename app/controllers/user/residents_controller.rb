@@ -12,11 +12,11 @@ class User::ResidentsController < ApplicationController
   def update
    @user = current_user
    if @user.update(user_params)
-   flash[:notice] ="ユーザー情報を変更しました"
-   redirect_to user_my_page_path
+    flash[:notice] ="ユーザー情報を変更しました"
+    redirect_to user_my_page_path
    else
-   flash.now[:notice] ="必要事項を入力してください"
-   render :edit
+    flash.now[:notice] ="必要事項を入力してください"
+    render :edit
    end
   end 
 
@@ -39,7 +39,7 @@ class User::ResidentsController < ApplicationController
   end
  
   def ensure_guest_user
-   @user = User.find(params[:id])
+    @user = User.find(params[:id])
    if @user.last_name == "ゲスト"
       redirect_to  user_resident_path(current_user) , notice: 'ゲストユーザーはプロフィール編集画面へ遷移できません。'
    end
