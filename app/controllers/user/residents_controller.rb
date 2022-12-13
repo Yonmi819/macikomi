@@ -46,3 +46,5 @@ class User::ResidentsController < ApplicationController
   end  
 
 end
+
+条件式に、User.guestを利用してみましょう。
