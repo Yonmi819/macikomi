@@ -1,51 +1,51 @@
 class User::PostsController < ApplicationController
    before_action :set_q,:search, only: [:index, :search]
   
-  def new
+ def new
    @post = Post.new
-  end
+ end
   
-  def create
-    @post = Post.new(post_params)
-    @post.user_id = current_user.id
-   if @post.save
-    @post.create_notification_post!(current_user)
-    flash[:notice] = 'うちの子を投稿しました。'
-    redirect_to user_posts_path
-   else
-    flash.now[:notice] = '必要事項を入力してください。'
-    render :new
-   end
+ def create
+   @post = Post.new(post_params)
+   @post.user_id = current_user.id
+  if @post.save
+   @post.create_notification_post!(current_user)
+   flash[:notice] = 'うちの子を投稿しました。'
+   redirect_to user_posts_path
+  else
+   flash.now[:notice] = '必要事項を入力してください。'
+   render :new
   end
+ end
 
   def index 
    @posts = Post.order(created_at: :desc).page(params[:page]).per(4)
   end
      
-  def show
+ def show
    @post = Post.find(params[:id])
    @post_comment = PostComment.new
-  end
+ end
   
-  def search
+ def search
    @results = @q.result.order(created_at: :desc).page(params[:page]).per(4)
-  end
+ end
      
-  def destroy
+ def destroy
    @post = Post.find(params[:id])
    @post.destroy  
    redirect_to user_posts_path 
-  end
+ end
   
-  private
+ private
   
-  def set_q
+ def set_q
    @q = Post.ransack(params[:q])
-  end
+ end
   
-  def post_params
+ def post_params
    params.require(:post).permit(:title, :body, :image)
-  end
+ end
   
 end
 

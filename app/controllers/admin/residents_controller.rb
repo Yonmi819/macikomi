@@ -1,44 +1,44 @@
-
+class Admin::ResidentsController < ApplicationController
   
-  def index
+ def index
    @users =  User.page(params[:page]).per(6)
-  end
+ end
 
-  def show
+ def show
    @user = User.find(params[:id])
-  end
+ end
 
-  def edit
+ def edit
    @user = User.find(params[:id])
-  end
+ end
   
-  def send_mail
+ def send_mail
    @user = User.find(params[:id])
    @message = params[:message]
    AdminMailer.send_mail(@user, @message).deliver_now
    flash[:notice] = "メールを送信いたしました"
    redirect_to admin_residents_path
-  end
+ end
   
-  def form
+ def form
    @user = User.find(params[:id])
-  end
+ end
   
-  def update
-    @user = User.find(params[:id])
-   if @user.update(user_params)
-    flash[:notice] = "ユーザー情報を変更しました"
-    redirect_to admin_resident_path(@user)
-   else
-    flash.now[:notice] = "必要事項を入力してください"
-    render :edit
-   end
+ def update
+   @user = User.find(params[:id])
+  if @user.update(user_params)
+   flash[:notice] = "ユーザー情報を変更しました"
+   redirect_to admin_resident_path(@user)
+  else
+   flash.now[:notice] = "必要事項を入力してください"
+   render :edit
   end
+ end
   
-  private
+ private
   
-  def user_params
-    params.require(:user).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :fee_status)
-  end
+ def user_params
+   params.require(:user).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :fee_status)
+ end
 
 end

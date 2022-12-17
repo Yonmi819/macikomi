@@ -1,9 +1,10 @@
 class User::HomesController < ApplicationController
-  def top
-  end
+  
+ def top
+ end
 
-  def about
+ def about
    @events = Event.all
-  end
+ end
 
 end
