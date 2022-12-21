@@ -3,7 +3,12 @@ class Admin::EventsController < ApplicationController
  def new
    @event = Event.new
  end
-  
+ 
+ def index
+   Post.order(created_at: :desc).page(params[:page]).per(4)
+   @events = Event.
+ end 
+ 
  def create
    @event = Event.new(event_params)
    @event.admin_id = current_admin.id
@@ -18,9 +23,18 @@ class Admin::EventsController < ApplicationController
  end
  
  def update
+   @event = Event.find(params[:id])
+  if @event.update(event_params)
+    redirect_to admin_events_path
+  else
+     render :edit
+  end
  end
  
  def destroy
+   @event = Event.find(params[:id])
+   @event.destroy(event_params)
+   redirect_to admin_events_path
  end
   
  private
