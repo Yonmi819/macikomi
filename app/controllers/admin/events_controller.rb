@@ -16,6 +16,12 @@ class Admin::EventsController < ApplicationController
     render :new
   end
  end
+ 
+ def update
+ end
+ 
+ def destroy
+ end
   
  private
 

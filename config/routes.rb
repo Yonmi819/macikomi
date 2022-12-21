@@ -36,8 +36,8 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   get '/residents/form' => "residents#form"
   post '/residents/send_mail' => "residents#send_mail"
-  resources :events, only: [:new, :create]
-  resources :residents, only: [:index, :show, :edit, :update]
+  resources :events, only: [:new, :create, :update, :destroy]
+  resources :residents, only: [:index, :show, :edit, :update, :destro]
  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
