@@ -1,0 +1,29 @@
+<div class="container">
+ <h4>イベント一覧</h4>
+  <div style="index-contents">
+   <table class="table table-striped">
+    <thead>
+     <tr>
+      <th>タイトル</th>
+      <th>内容</th>
+      <th>日時</th>
+     </tr>
+    </thead>
+    <tbody>
+     <% @events.each do |event| %>
+     <tr>
+      <td>
+      <%= event.title %>
+      </td>
+      <td>
+      <%= event.content %>
+      </td>
+      <td>
+      <%= event.start_time.strftime("%H:%M") %>
+      </td>
+     </tr>
+     <% end %>
+    </tbody>
+   </table>
+  </div>
+</div>
