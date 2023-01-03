@@ -9,14 +9,43 @@ h5{
 .top-contents{
   width: 960px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.img-box1{
-  padding-top: 30px;
-  text-align: center;
+.img-box:nth-child(odd) {
+  margin-right: 20px;
 }
 
-.img-box2,.img-box3{
-  text-align: center;
+.img-box {
+  width: 460px;
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.img-box:nth-child(1) {
+  background-image: url(img/admin1.jpg);
+}
+
+.img-box:nth-child(2) {
+  background-image: url(img/admin2.jpg);
+}
+
+.img-box:nth-child(3) {
+  background-image: url(img/admin3.jpg);
+}
+
+.img-box:nth-child(4) {
+  background-image: url(img/admin4.jpg);
+}
+
+.img-box:nth-child(5) {
+  background-image: url(img/admin6.jpg);
+}
+
+.img-box:nth-child(6) {
+  background-image: url(img/admin5.jpg);
 }
 
