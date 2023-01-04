@@ -80,3 +80,31 @@ a{
   color: #8B0000;
 }
 
+@media (max-width: 768px) {
+.menu-box {
+  width: 40px;
+  height: 40px;
+  margin-right: 5%;
+  border: 1px solid #FAFAFA;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+ }
+ 
+.list-bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: #FAFAFA;
+ }
+
+.nav-list {
+  display: none;
+  width: 100%;
+  line-height: 50px;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  background-color: rgba(0,0,0,.9);
+ }
+}
