@@ -80,7 +80,7 @@ a{
   color: #8B0000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 390px) {
 .menu-box {
   width: 40px;
   height: 40px;
@@ -102,9 +102,17 @@ a{
 .nav-list {
   display: none;
   width: 100%;
-  line-height: 50px;
+  line-height: 55px;
   border-bottom: 1px solid gray;
   text-align: center;
   background-color: rgba(0,0,0,.9);
+ }
+ 
+.top-contents {
+  flex-direction: column;
+ }
+
+.img-box {
+  margin: 0 auto;
  }
 }
