@@ -6,8 +6,11 @@ class Admin::EventsController < ApplicationController
  
  def index
    @events = Event.order(created_at: :desc).page(params[:page]).per(4)
-   
- end 
+ end
+ 
+ def edit
+   @event = Event.find(params[:id])
+ end
  
  def create
    @event = Event.new(event_params)

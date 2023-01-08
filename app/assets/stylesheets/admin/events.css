@@ -27,3 +27,16 @@ h4{
 .form-1{
   width: 350px;
 }
+
+.index-contents{
+  width: 850px;
+  margin: 0 auto;
+}
+
+.table{
+  background-color: #ffffff;
+}
+
+.thead{
+  background-color: #000080;
+}

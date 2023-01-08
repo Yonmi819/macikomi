@@ -1,12 +1,15 @@
+<%= stylesheet_link_tag 'admin/events' %>
+
 <div class="container">
  <h4>イベント一覧</h4>
-  <div style="index-contents">
+  <div class="index-contents">
    <table class="table table-striped">
     <thead>
      <tr>
       <th>タイトル</th>
       <th>内容</th>
       <th>日時</th>
+      <th colspan="1"></th>
      </tr>
     </thead>
     <tbody>
@@ -20,6 +23,10 @@
       </td>
       <td>
       <%= event.start_time.strftime("%H:%M") %>
+      </td>
+      <td>
+       <%= link_to "編集する", edit_admin_event_path(event), class: "mr-2 btn btn-sm btn-success" %>
+       <%= link_to "削除する", admin_event_path(event), class: "btn btn-sm btn-danger" , method: :delete, data: {confirm: "本当に削除しますか？" } %>
       </td>
      </tr>
      <% end %>
