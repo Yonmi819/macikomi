@@ -80,7 +80,8 @@ a{
   color: #8B0000;
 }
 
-@media (max-width: 390px) {
+/* ↓スマートフォンレスポンシブ対応 */
+@media (max-width: 670px) {
 .menu-box {
   width: 40px;
   height: 40px;
