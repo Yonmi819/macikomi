@@ -1,33 +1,50 @@
 <%= stylesheet_link_tag 'user/residents' %>
 
 <div class="container">
-  <h4>ユーザー詳細</h4>
-   <div class="show-contents">
-    <table class="table table-striped">
-     <tr>
-      <th>名前</th>
-      <td>
-      <%= @user.last_name + @user.first_name %>
-      </td>
-     </tr>
-     <tr>
-      <th>フリガナ</th>
-      <td>
-      <%= @user.last_name_kana + @user.first_name_kana %>
-      </td>
-     </tr>
-     <tr>
-      <th>メールアドレス</th>
-      <td>
-      <%= @user.email %>
-      </td>
-     </tr>
-    </table>
-    
-    <% if @user.last_name != "ゲスト" %>
-     <div class="actions">
-       <%= link_to "編集する", edit_user_resident_path(@user), class: 'btn btn-warning'%>
-     </div>
-    <% end %> 
+  
+  <div class="show-contents">
+   <div class="left-contents">
+    <h4>ユーザー情報</h4>
+     <table class="table table-striped">
+      <tr>
+       <th>名前</th>
+       <td>
+       <%= @user.last_name + @user.first_name %>
+       </td>
+      </tr>
+      <tr>
+       <th>フリガナ</th>
+       <td>
+       <%= @user.last_name_kana + @user.first_name_kana %>
+       </td>
+      </tr>
+      <tr>
+       <th>メールアドレス</th>
+       <td>
+       <%= @user.email %>
+       </td>
+      </tr>
+     </table>
+     <% if @user.last_name != "ゲスト" %>
+      <div class="actions">
+        <%= link_to "編集する", edit_user_resident_path(@user), class: 'btn btn-warning'%>
+      </div>
+     <% end %>
    </div>
+   <div class="right-contents">
+    <h4>投稿情報</h4>
+     <% if @posts.length != 0 %>
+      <% @posts.each do |post|%>
+       <div class="post-box">
+        <%= link_to user_post_path(post) do %>
+         <%= image_tag post.image, size: "270x160" %><br>
+         <h5><%= post.title %></h5>
+        <% end %>
+       </div>
+      <% end %>
+     <% else %>
+      <h5>投稿内容はありません</h5>
+     <% end %>
+   </div>
+  </div>
 </div>

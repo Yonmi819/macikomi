@@ -40,6 +40,7 @@ class User::ResidentsController < ApplicationController
    params.require(:user).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :fee_status)
  end
  
+ #ゲストユーザーは編集画面に行かないよう制限をかける
  def ensure_guest_user
     @user = User.find(params[:id])
   if @user.last_name == "ゲスト"

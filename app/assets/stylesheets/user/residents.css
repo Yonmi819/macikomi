@@ -6,6 +6,11 @@ h4{
   font-family: 'Kiwi Maru', serif;
 }
 
+h5{
+  text-align: center; 
+  font-family: 'Kiwi Maru', serif;
+}
+
 p{
   font-size: 20px;
   text-align: center;
@@ -42,8 +47,24 @@ p{
 }
 
 .show-contents{
-  width: 550px;
+  width: 900px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.left-contents{
+  width: 480px;
+}
+
+.right-contents{
+  width: 380px;
+}
+
+.post-box{
+  width: 350px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 th,td{
