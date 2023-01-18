@@ -28,6 +28,8 @@ class Admin::EventsController < ApplicationController
  def update
    @event = Event.find(params[:id])
   if @event.update(event_params)
+   @event.create_notification_event!(@event.id)
+   flash[:notice] = 'イベントを編集しました!'
     redirect_to admin_events_path
   else
      render :edit

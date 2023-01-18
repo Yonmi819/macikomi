@@ -7,7 +7,7 @@ class Event < ApplicationRecord
   validates :start_time, presence: true
     
   #管理者がイベントをつくった際の通知を作成するメソッド
-  def create_notification_event!(evet_id)
+  def create_notification_event!(event_id)
    temp_ids = User.all.select(:id).distinct
    temp_ids.each do |temp_id|
    save_notification_event!(temp_id['id'])
