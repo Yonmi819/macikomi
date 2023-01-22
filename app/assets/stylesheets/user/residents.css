@@ -47,24 +47,24 @@ p{
 }
 
 .show-contents{
-  width: 900px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
 }
 
 .left-contents{
-  width: 480px;
+  width: 50%;
+  text-align: center;
 }
 
 .right-contents{
-  width: 380px;
+  width: 50%;
+  text-align: center;
 }
 
 .post-box{
   width: 350px;
   margin-bottom: 15px;
-  text-align: center;
 }
 
 th,td{

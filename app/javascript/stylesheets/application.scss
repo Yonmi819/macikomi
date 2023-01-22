@@ -18,7 +18,8 @@ body{
 }
 
 .container{
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -81,6 +82,10 @@ a{
 }
 
 
+/*タブレットレスポンシブ対応*/
+@media (max-width: 1000px) {
+  
+}
 
 /* ↓スマートフォンレスポンシブ対応 */
 @media (max-width: 670px) {
@@ -119,3 +124,4 @@ a{
   margin: 0 auto;
  }
 }
+
